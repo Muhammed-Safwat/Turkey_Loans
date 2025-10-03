@@ -3,7 +3,7 @@
           type="button"
           data-bs-toggle="dropdown"
           aria-expanded="false">
-    <img [src]="currentLang === 'ar' ? '/images/flags/saudi-flag.svg' : '/images/flags/uk-flag.avif'"
+    <img [src]="currentLang === 'ar' ? '"assets/images/flags/saudi-flag.svg' : '"assets/images/flags/uk-flag.avif'"
          [alt]="currentLang === 'ar' ? 'Saudi Arabia Flag' : 'UK Flag'"
          class="flag-icon me-2">
     <span class="language-text">{{ currentLang === 'ar' ? 'العربية' : 'English' }}</span>
@@ -13,7 +13,7 @@
       <a class="dropdown-item d-flex gap-2 align-items-center"
          (click)="changeLanguage('ar')"
          [class.active]="currentLang === 'ar'">
-        <img src="/images/flags/saudi-flag.svg"
+        <img src=""assets/images/flags/saudi-flag.svg"
              alt="Saudi Arabia Flag"
              class="flag-icon me-2">
         <span>العربية</span>
@@ -23,7 +23,7 @@
       <a class="dropdown-item d-flex gap-2 align-items-center"
          (click)="changeLanguage('en')"
          [class.active]="currentLang === 'en'">
-        <img src="/images/flags/uk-flag.avif"
+        <img src=""assets/images/flags/uk-flag.avif"
              alt="UK Flag"
              class="flag-icon me-2">
         <span>English</span>

@@ -45,7 +45,7 @@
   .hero-heading {
     font-weight: 700;
     color: $text-dark;
-    background: url('/images/shape/shape_01.svg') no-repeat left top;
+    background: url('"assets/images/shape/shape_01.svg') no-repeat left top;
     background-size: cover;
     padding: 11px 31px 25px 25px;
   }
@@ -183,7 +183,7 @@
 
 // Hero Banner Four
 .hero-banner-four {
-  background: url('/images/assets/bg_01.svg') no-repeat center bottom;
+  background: url('"assets/images/assets/bg_01.svg') no-repeat center bottom;
   background-size: cover;
   z-index: 1;
 
@@ -254,7 +254,7 @@
 
   .media-wrapper {
     position: absolute;
-    background: url('/images/assets/bg_05.svg') no-repeat left top;
+    background: url('"assets/images/assets/bg_05.svg') no-repeat left top;
     background-size: cover;
     border-radius: 30px 0 0 30px;
     top: 0;
@@ -288,7 +288,7 @@
   }
 
   .media-wrapper {
-    background: url('/images/media/img_48.jpg') no-repeat center;
+    background: url('"assets/images/media/img_48.jpg') no-repeat center;
     background-size: cover;
     border-radius: 20px;
     max-width: 536px;
@@ -438,7 +438,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: url('/images/shape/shape_53.svg') no-repeat center;
+    background: url('"assets/images/shape/shape_53.svg') no-repeat center;
     background-size: cover;
   }
 
@@ -515,7 +515,7 @@
 
 // Fancy Banner Three
 .fancy-banner-three {
-  background: url('/images/media/img_17.jpg') no-repeat center;
+  background: url('"assets/images/media/img_17.jpg') no-repeat center;
   background-size: cover;
   padding: 80px 0;
   z-index: 1;
@@ -566,7 +566,7 @@
     top: 0;
     right: 0;
     z-index: -1;
-    background: url('/images/shape/shape_10.svg') no-repeat left bottom;
+    background: url('"assets/images/shape/shape_10.svg') no-repeat left bottom;
     background-size: cover;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -638,7 +638,7 @@
 
 // Fancy Banner Five
 .fancy-banner-five {
-  background: url('/images/media/img_31.jpg') no-repeat center;
+  background: url('"assets/images/media/img_31.jpg') no-repeat center;
   background-size: cover;
   z-index: 1;
 
@@ -650,7 +650,7 @@
     }
 
     .bg-wrapper {
-      background: url('/images/media/img_33.jpg') no-repeat center;
+      background: url('"assets/images/media/img_33.jpg') no-repeat center;
       background-size: cover;
 
       .video-icon {
@@ -694,7 +694,7 @@
 
 // Fancy Banner Six
 .fancy-banner-six {
-  background: url('/images/media/img_34.jpg') no-repeat center;
+  background: url('"assets/images/media/img_34.jpg') no-repeat center;
   background-size: cover;
   z-index: 1;
 
@@ -718,7 +718,7 @@
 // Fancy Banner Seven
 .fancy-banner-seven {
   .bg-wrapper {
-    background: url('/images/media/img_50.jpg') no-repeat center;
+    background: url('"assets/images/media/img_50.jpg') no-repeat center;
     background-size: cover;
 
     &:before {
