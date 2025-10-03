@@ -1,9 +1,5 @@
-/* Import SCSS Variables */
 @use './assets/scss/_variables' as *;
 @use './assets/scss/_mixins' as *;
-
-/* Import AOS CSS */
-@import 'aos/dist/aos.css';
 
 * {
   font-family: $main-font;
