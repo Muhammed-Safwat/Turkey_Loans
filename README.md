@@ -38,6 +38,12 @@ Turkey Loans is a modern, multilingual web application built with Angular 19 for
 - **Company Information**: Professional footer with company details
 - **About Page**: Comprehensive project and company information
 
+### 📱 **Mobile-First Design**
+- **Responsive Typography**: Optimized font sizes for all screen sizes
+- **Mobile Navigation**: Collapsible menu with close button
+- **Touch-Friendly**: Optimized for mobile interactions
+- **Performance**: Fast loading on mobile devices
+
 ## 🛠️ Technology Stack
 
 | Technology | Version | Purpose |
@@ -47,6 +53,7 @@ Turkey Loans is a modern, multilingual web application built with Angular 19 for
 | **SCSS** | Latest | CSS Preprocessor |
 | **ngx-translate** | 17.0.0 | Internationalization |
 | **RxJS** | 7.8.0 | Reactive Programming |
+| **Bootstrap Icons** | Latest | Icon Library |
 
 ## 📁 Project Structure
 
@@ -55,21 +62,36 @@ src/
 ├── app/
 │   ├── pages/
 │   │   ├── home/                 # Home page component
-│   │   └── about/                # About page component
+│   │   ├── about/                # About page component
+│   │   ├── services/             # Services listing page
+│   │   ├── service-detail/       # Individual service details
+│   │   ├── contact-us/           # Contact page
+│   │   ├── privacy-policy/       # Privacy policy page
+│   │   ├── terms-conditions/     # Terms and conditions page
+│   │   └── error/                # Error page component
 │   ├── shared/
 │   │   ├── components/
-│   │   │   ├── footer/           # Footer component
-│   │   │   └── language-switcher/ # Language switcher
-│   │   └── core/
-│   │       ├── interfaces/       # TypeScript interfaces
-│   │       └── services/         # Core services
+│   │   │   ├── layout/           # Header and footer components
+│   │   │   ├── banner/           # Hero banner component
+│   │   │   ├── banking-solutions/ # Banking solutions section
+│   │   │   ├── block-feature-*/  # Feature block components
+│   │   │   ├── contact-*/        # Contact related components
+│   │   │   ├── feedback-section/ # Customer feedback section
+│   │   │   ├── language-switcher/ # Language switcher
+│   │   │   └── whatsapp-contact/ # WhatsApp contact component
+│   │   ├── core/
+│   │   │   ├── interfaces/       # TypeScript interfaces
+│   │   │   └── services/         # Core services (SEO, Scroll, etc.)
+│   │   └── styles/
+│   │       └── mobile-fonts.scss # Mobile responsive fonts
 │   ├── app.component.*           # Main app component
 │   ├── app.config.ts            # App configuration
 │   └── app.routes.ts            # Routing configuration
-├── assets/
-│   └── i18n/                    # Translation files
-│       ├── ar.json              # Arabic translations
-│       └── en.json              # English translations
+├── public/
+│   ├── i18n/                    # Translation files
+│   │   ├── ar.json              # Arabic translations
+│   │   └── en.json              # English translations
+│   └── scss/                    # Global SCSS files
 └── styles.scss                  # Global styles
 ```
 
@@ -122,60 +144,67 @@ src/
 - **Sitemap**: Multi-language sitemap with proper hreflang
 - **Robots.txt**: Professional configuration for search engines
 
-## 🏢 Global SEO Standards Implementation
+## 📄 Available Pages
 
-### How Global Companies Handle Multilingual SEO
+### Main Pages
+- **Home** (`/`) - Landing page with hero banner and services overview
+- **About** (`/about`) - Company information and mission
+- **Services** (`/services`) - Complete list of loan services
+- **Service Detail** (`/services/:id`) - Individual service details
+- **Contact** (`/contact`) - Contact information and form
+- **Privacy Policy** (`/privacy-policy`) - Privacy policy page
+- **Terms & Conditions** (`/terms-conditions`) - Terms and conditions
+- **Error** (`/error`) - 404 error page
 
-#### **Google Approach**
-- `google.com/ar/` for Arabic
-- `google.com/en/` for English
-- Proper hreflang implementation
-- Canonical URLs for each language
+### Service Types
+1. **تسديد القروض بكافة أنواعها** - All types of loan repayment
+2. **استخراج التمويلات** - Loan extraction services
+3. **الاستشارات المالية** - Financial consultations
+4. **الرهن العقاري** - Mortgage services
 
-#### **Microsoft Approach**
-- `microsoft.com/ar-sa/` for Arabic (Saudi Arabia)
-- `microsoft.com/en-us/` for English (United States)
-- Geographic targeting
-- Language-specific content
-
-#### **Apple Approach**
-- `apple.com/ar/` for Arabic
-- `apple.com/en/` for English
-- Clean URL structure
-- Consistent navigation
-
-### Our Implementation
-We follow the same standards as these global companies:
-
-```html
-<!-- Hreflang Implementation -->
-<link rel="alternate" hreflang="ar" href="https://turkeyloans.intechdev.net/ar">
-<link rel="alternate" hreflang="en" href="https://turkeyloans.intechdev.net/en">
-<link rel="alternate" hreflang="x-default" href="https://turkeyloans.intechdev.net/ar">
-
-<!-- Meta Tags -->
-<meta name="language" content="ar">
-<meta property="og:locale" content="ar_SA">
-<meta name="geo.region" content="SA">
-```
-
-### SEO Best Practices Implemented
-- ✅ **Separate URLs**: Each language has its own URL
-- ✅ **Hreflang Tags**: Proper international SEO
-- ✅ **Canonical URLs**: Prevents duplicate content issues
-- ✅ **Meta Tags**: Dynamic and language-specific
-- ✅ **Sitemap**: Multi-language sitemap
-- ✅ **Robots.txt**: Professional configuration
-- ✅ **Structured Data**: JSON-LD for rich snippets
-
-## 🎯 Company Information
+## 🏢 Company Information
 
 **Developed by IN TECH**
 - **Website**: https://www.intechdev.net
 - **Email**: info@intechdev.net
-- **Phone**: +966 54 946 7661
+- **Phone**: +966 53 497 0654
 - **Address**: Riyadh, Saudi Arabia
 - **Motto**: "We Build You Grow"
+
+## 📱 Mobile Responsiveness
+
+### Responsive Features
+- **Mobile-First Design**: Optimized for mobile devices
+- **Responsive Typography**: Font sizes adjust for different screen sizes
+- **Touch-Friendly Navigation**: Easy-to-use mobile menu
+- **Optimized Images**: Fast loading on mobile networks
+- **Swiper Integration**: Smooth carousel for testimonials
+
+### Breakpoints
+- **Desktop**: 1200px and above
+- **Tablet**: 768px - 1199px
+- **Mobile**: 576px - 767px
+- **Small Mobile**: Below 576px
+
+## 🔧 Technical Features
+
+### Routing & Navigation
+- **Angular Router**: Client-side routing with lazy loading
+- **Scroll Restoration**: Pages load at the top
+- **Anchor Scrolling**: Smooth scrolling to sections
+- **Route Guards**: Protected routes implementation
+
+### Performance Optimizations
+- **Lazy Loading**: Components loaded on demand
+- **Standalone Components**: Modern Angular architecture
+- **Tree Shaking**: Optimized bundle size
+- **Service Workers**: Offline functionality
+
+### SEO & Meta Tags
+- **Dynamic Meta Tags**: Language-specific meta information
+- **Structured Data**: JSON-LD for rich snippets
+- **Open Graph**: Social media sharing optimization
+- **Twitter Cards**: Twitter sharing optimization
 
 ## 📝 Available Scripts
 
@@ -183,6 +212,7 @@ We follow the same standards as these global companies:
 |---------|-------------|
 | `ng serve` | Start development server |
 | `ng build` | Build for production |
+| `ng build --configuration=development` | Build for development |
 | `ng test` | Run unit tests |
 | `ng lint` | Run linting |
 
@@ -192,7 +222,7 @@ We follow the same standards as these global companies:
 The application supports easy addition of new languages:
 
 1. **Add language code** to `supported-languages.ts`
-2. **Create translation file** in `src/assets/i18n/`
+2. **Create translation file** in `src/public/i18n/`
 3. **Update language service** configuration
 4. **Add language option** to switcher component
 
@@ -210,6 +240,7 @@ The application supports easy addition of new languages:
 - ✅ Meta tags optimization
 - ✅ Clean URL structure
 - ✅ Performance optimization
+- ✅ Mobile-first design
 
 ### Code Quality
 - ✅ TypeScript strict mode
@@ -217,6 +248,7 @@ The application supports easy addition of new languages:
 - ✅ Service-based architecture
 - ✅ Interface-driven development
 - ✅ Responsive design
+- ✅ Mobile optimization
 
 ### User Experience
 - ✅ Intuitive language switching
@@ -224,6 +256,7 @@ The application supports easy addition of new languages:
 - ✅ Professional design
 - ✅ Mobile-first approach
 - ✅ Accessibility considerations
+- ✅ Touch-friendly interface
 
 ## 📱 Browser Support
 
@@ -231,6 +264,7 @@ The application supports easy addition of new languages:
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## 🤝 Contributing
 
@@ -244,11 +278,12 @@ The application supports easy addition of new languages:
 
 This project is developed by IN TECH. All rights reserved.
 
-##  Support
+## 🆘 Support
 
 For support and inquiries:
 - **Email**: info@intechdev.net
 - **Website**: https://www.intechdev.net
+- **Phone**: +966 53 497 0654
 
 ---
 

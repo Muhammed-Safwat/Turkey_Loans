@@ -19,8 +19,7 @@ export interface Testimonial {
   templateUrl: './feedback-section.component.html',
   styleUrl: './feedback-section.component.scss'
 })
-export class FeedbackSectionComponent implements OnInit, AfterViewInit {
-  readonly isRTL = computed(() => this.languageService.isRTL());
+export class FeedbackSectionComponent implements OnInit, AfterViewInit { 
 
   readonly testimonials: Testimonial[] = [
     {

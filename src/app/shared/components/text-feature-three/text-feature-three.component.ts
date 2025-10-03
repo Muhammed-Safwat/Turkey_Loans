@@ -26,7 +26,7 @@ export interface TextFeature {
   styleUrl: './text-feature-three.component.scss'
 })
 export class TextFeatureThreeComponent {
-  readonly isRTL = computed(() => this.languageService.isRTL());
+   
 
   readonly features: TextFeature[] = [
     {

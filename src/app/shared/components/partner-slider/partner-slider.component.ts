@@ -59,7 +59,7 @@ export class PartnerSliderComponent {
     }
   ];
 
-  readonly isRTL = computed(() => this.languageService.isRTL());
+  
 
   constructor(private languageService: LanguageService) {}
 }

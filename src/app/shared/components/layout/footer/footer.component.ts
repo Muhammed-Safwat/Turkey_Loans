@@ -20,8 +20,7 @@ export interface SocialLink {
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
-  readonly isRTL = computed(() => this.languageService.isRTL());
+export class FooterComponent { 
 
   readonly quickLinks: FooterLink[] = [
     { text: 'الرئيسية', href: '/' },

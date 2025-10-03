@@ -19,8 +19,7 @@ export interface Service {
   templateUrl: './block-feature-five.component.html',
   styleUrl: './block-feature-five.component.scss'
 })
-export class BlockFeatureFiveComponent {
-  readonly isRTL = computed(() => this.languageService.isRTL());
+export class BlockFeatureFiveComponent { 
 
   readonly services: Service[] = [
     {
