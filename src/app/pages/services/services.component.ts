@@ -8,6 +8,7 @@ import { IslamicComplianceComponent } from '../../shared/components/islamic-comp
 import { CoverageAreasComponent } from '../../shared/components/coverage-areas/coverage-areas.component';
 import { ContactBannerComponent } from '../../shared/components/contact-banner/contact-banner.component';
 import { FooterComponent } from "../../shared/components/layout/footer/footer.component";
+import { ScrollService } from '../../shared/core/services/scroll.service';
 
 @Component({
   selector: 'app-services',
@@ -17,12 +18,12 @@ import { FooterComponent } from "../../shared/components/layout/footer/footer.co
 })
 export class ServicesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrollService: ScrollService) { }
 
   ngOnInit(): void { 
+    this.scrollService.scrollToTop();
   }
 
-  // Service data
   services = [
     {
       id: 'loan-repayment',
@@ -155,10 +156,11 @@ export class ServicesComponent implements OnInit {
   contactBanner = {
     title: 'تواصل معنا الآن',
     description: 'احصل على استشارة مجانية حول تسديد قروضك والمتعثرات',
-    whatsappNumber: '966501234567',
-    phoneNumber: '+966501234567',
+    whatsappNumber: '966534970654',
+    phoneNumber: '+966534970654',
     email: 'info@abuturki-loans.com',
     whatsappMessage: 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات'
   };
+
 
 }

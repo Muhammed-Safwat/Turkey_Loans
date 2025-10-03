@@ -9,6 +9,7 @@ import { BlockFeatureFiveComponent } from "../../shared/components/block-feature
 import { FeedbackSectionComponent } from "../../shared/components/feedback-section/feedback-section.component";
 import { FooterComponent } from "../../shared/components/layout/footer/footer.component";
 import { ContactBannerComponent } from "../../shared/components/contact-banner/contact-banner.component";
+import { ScrollService } from '../../shared/core/services/scroll.service';
  
 @Component({
   selector: 'app-home',
@@ -33,16 +34,19 @@ export class HomeComponent implements OnInit {
   contactBanner = {
     title: 'تواصل معنا الآن',
     description: 'احصل على استشارة مجانية حول تسديد قروضك والمتعثرات',
-    whatsappNumber: '966501234567',
-    phoneNumber: '+966501234567',
+    whatsappNumber: '966534970654',
+    phoneNumber: '+966534970654',
     email: 'info@abuturki-loans.com',
     whatsappMessage: 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات'
   };
+
+  constructor(private scrollService: ScrollService) {}
 
   getContactBannerData(){
     return this.contactBanner;
   }
   
   ngOnInit() { 
+    this.scrollService.scrollToTop();
   }
 }

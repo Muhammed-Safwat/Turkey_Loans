@@ -35,7 +35,7 @@ export class TextFeatureThreeComponent {
       title: 'معك بخطوات واضحة لنجاحك المالي',
       description: 'وسيط شرعي داخل المملكة نساعدك في سداد القروض المتعثرة واستخراج تمويلات جديدة من البنوك والشركات بسرعة وموثوقية.',
       buttonText: 'اعرف المزيد',
-      buttonLink: 'about-us-v1.html',
+      buttonLink: '/about',
       counters: [
         { value: 10, label: 'سنوات خبرة' },
         { value: 3000, label: 'عميل سعيد بخدماتنا' }

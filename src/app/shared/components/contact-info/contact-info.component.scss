@@ -1,4 +1,14 @@
 // Contact info component styles
+
+// Phone number styling for RTL
+.call {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  display: inline-block;
+}
+
 .title-one {
   h2 {
     color: #1a1a1a;

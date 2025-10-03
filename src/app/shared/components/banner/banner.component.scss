@@ -103,7 +103,7 @@
       border-radius: 50px;
       background: #fff;
       border: none;
-      padding: 0 35px 0 150px;
+      padding: 0 35px 0 80px;
     }
 
     button {
@@ -1067,5 +1067,26 @@
     bottom: 30%;
     width: 1.65%;
     animation: rotated 50s infinite linear;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .send-message {
+    display: none;
+  }
+
+  .hero-heading {
+    font-size: 42px !important;
+    line-height: 1.2 !important;
+  }
+
+  p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+  }
+
+  .partner-logo-one p {
+    font-size: 16px !important;
   }
 }

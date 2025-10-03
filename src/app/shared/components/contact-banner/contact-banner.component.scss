@@ -30,3 +30,27 @@
    font-size: 65px;
    line-height: 1.1em;
  }
+
+ // Mobile responsive fonts
+ @media screen and (max-width: 768px) {
+   .whatsapp-contact-section {
+     .whatsapp-btn {
+       font-size: 12px !important;
+       padding: 10px 20px !important;
+
+       i {
+         font-size: 14px !important;
+       }
+     }
+   }
+
+   .fancy-banner-five h2 {
+     font-size: 24px !important;
+     line-height: 1.2 !important;
+   }
+
+   .fancy-banner-five p {
+     font-size: 12px !important;
+     line-height: 1.4 !important;
+   }
+ }

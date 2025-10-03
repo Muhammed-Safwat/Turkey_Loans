@@ -1,5 +1,6 @@
 import { Component, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { LanguageService } from '../../../core/services/language.service';
 
 export interface FooterLink {
@@ -15,7 +16,7 @@ export interface SocialLink {
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
@@ -23,27 +24,24 @@ export class FooterComponent {
   readonly isRTL = computed(() => this.languageService.isRTL());
 
   readonly quickLinks: FooterLink[] = [
-    { text: 'الرئيسية', href: 'index.html' },
-    { text: 'من نحن', href: 'about.html' },
-    { text: 'خدماتنا', href: 'services.html' },
-    { text: 'آراء العملاء', href: 'testimonials.html' },
-    { text: 'تواصل معنا', href: 'contact.html' }
+    { text: 'الرئيسية', href: '/' },
+    { text: 'من نحن', href: '/about' },
+    { text: 'خدماتنا', href: '/services' },
+    { text: 'تواصل معنا', href: '/contact' }
   ];
 
   readonly supportLinks: FooterLink[] = [
-    { text: 'سياسة الخصوصية', href: 'privacy.html' },
-    { text: 'الشروط والأحكام', href: 'terms.html' },
-    { text: 'الأسئلة الشائعة', href: 'faq.html' }
+    { text: 'سياسة الخصوصية', href: '/privacy-policy' },
+    { text: 'الشروط والأحكام', href: '/terms-conditions' },
+    { text: 'الأسئلة الشائعة', href: '#' }
   ];
 
   readonly contactInfo: FooterLink[] = [
-    { text: '966561527263+', href: 'tel:+966561527263' }, 
+    { text: '+966 53 497 0654', href: 'tel:+966534970654' }, 
   ];
 
   readonly socialLinks: SocialLink[] = [
-    { icon: 'bi bi-facebook', href: '#' },
-    { icon: 'bi bi-instagram', href: '#' },
-    { icon: 'bi bi-whatsapp', href: '#' }
+    { icon: 'bi bi-whatsapp', href: 'https://wa.me/966534970654' }
   ];
 
   constructor(private languageService: LanguageService) {}
