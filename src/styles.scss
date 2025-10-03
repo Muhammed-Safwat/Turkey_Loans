@@ -1,21 +1,6 @@
 /* Import SCSS Variables */
-@use '../public/scss/_variables' as *;
-@use '../public/scss/_mixins' as *;
-@use '../public/scss/_base' as *;
-@use '../public/scss/_animation' as *;
-@use '../public/scss/_banner' as *;
-@use '../public/scss/_card' as *;
-@use '../public/scss/_contact' as *;
-@use '../public/scss/_element' as *;
-@use '../public/scss/_feedback' as *;
-@use '../public/scss/_footer' as *;
-@use '../public/scss/_header' as *;
-@use '../public/scss/_layout' as *;
-@use '../public/scss/_prefix' as *;
-@use '../public/scss/_project' as *;
-@use '../public/scss/_service' as *;
-@use '../public/scss/_shop' as *;
-@use '../public/scss/_vendor' as *;
+@use './assets/scss/_variables' as *;
+@use './assets/scss/_mixins' as *;
 
 /* Import AOS CSS */
 @import 'aos/dist/aos.css';
