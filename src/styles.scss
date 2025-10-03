@@ -30,21 +30,18 @@ body {
   color: $text-color;
 }
 
-/* English content should be LTR */
 [dir="ltr"],
 html[dir="ltr"] body,
 html[dir="ltr"] {
   direction: ltr;
 }
 
-/* Arabic content should be RTL */
 [dir="rtl"],
 html[dir="rtl"] body,
 html[dir="rtl"] {
   direction: rtl;
 }
 
-/* Ensure all elements inherit direction */
 html[dir="ltr"] * {
   direction: ltr;
 }
@@ -53,7 +50,6 @@ html[dir="rtl"] * {
   direction: rtl;
 }
 
-/* Font weight classes */
 .fw-200 {
   font-weight: 200;
 }
