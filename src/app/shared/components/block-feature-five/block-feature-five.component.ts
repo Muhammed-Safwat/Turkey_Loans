@@ -1,0 +1,60 @@
+import { Component, computed } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { LanguageService } from '../../core/services/language.service';
+
+export interface Service {
+  id: number;
+  icon: string;
+  title: string;
+  description: string;
+  link: string;
+  delay?: string;
+}
+
+@Component({
+  selector: 'app-block-feature-five',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './block-feature-five.component.html',
+  styleUrl: './block-feature-five.component.scss'
+})
+export class BlockFeatureFiveComponent {
+  readonly isRTL = computed(() => this.languageService.isRTL());
+
+  readonly services: Service[] = [
+    {
+      id: 1,
+      icon: '/images/icon/icon_23.svg',
+      title: 'سداد القروض',
+      description: 'حلول سريعة وموثوقة لسداد القروض والمتعثرات داخل المملكة.',
+      link: 'service-details.html',
+      delay: '0s'
+    },
+    {
+      id: 2,
+      icon: '/images/icon/icon_24.svg',
+      title: 'استخراج تمويل',
+      description: 'نساعدك في الحصول على قروض شخصية أو عقارية من البنوك والشركات.',
+      link: 'service-details.html',
+      delay: '0.1s'
+    },
+    {
+      id: 3,
+      icon: '/images/icon/icon_25.svg',
+      title: 'رهن عقاري',
+      description: 'إجراءات رهن عقاري مرنة وسريعة لتلبية احتياجاتك التمويلية.',
+      link: 'service-details.html',
+      delay: '0.2s'
+    },
+    {
+      id: 4,
+      icon: '/images/icon/icon_26.svg',
+      title: 'تمويل شركات',
+      description: 'ندعم أصحاب الشركات والمؤسسات بتمويلات شرعية مرنة وآمنة.',
+      link: 'service-details.html',
+      delay: '0.3s'
+    }
+  ];
+
+  constructor(private languageService: LanguageService) {}
+}

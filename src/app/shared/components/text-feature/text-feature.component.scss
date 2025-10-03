@@ -1,0 +1,24 @@
+@use '../../../../../public/scss/variables' as *;
+@use '../../../../../public/scss/mixins' as *;
+
+// Text Feature Two
+.text-feature-two {
+  background: $color-three;
+  z-index: 1;
+
+  .shape_01 {
+    top: 16%;
+    left: 3%;
+    width: 2.3%;
+    min-width: 28px;
+    animation: rotated 50s infinite linear;
+  }
+
+  .shape_02 {
+    bottom: 5%;
+    right: 2%;
+    width: 1.5%;
+    min-width: 22px;
+    animation: rotated 48s infinite linear;
+  }
+}

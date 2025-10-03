@@ -1,0 +1,24 @@
+<app-header></app-header>
+<app-inner-banner [title]="bannerData.title"
+                  [description]="bannerData.description"
+                  [breadcrumbItems]="bannerData.breadcrumbItems">
+</app-inner-banner>
+
+<app-banking-solutions [services]="services"></app-banking-solutions>
+
+<app-client-stats [stats]="clientStats"
+                  [features]="additionalFeatures"></app-client-stats>
+
+<app-islamic-compliance [compliance]="islamicCompliance"></app-islamic-compliance>
+
+<app-coverage-areas [areas]="coverageAreas"
+                    title="نحن نخدم جميع مناطق المملكة"></app-coverage-areas>
+
+<app-contact-banner [title]="contactBanner.title"
+                    [description]="contactBanner.description"
+                    [whatsappNumber]="contactBanner.whatsappNumber"
+                    [phoneNumber]="contactBanner.phoneNumber"
+                    [email]="contactBanner.email"
+                    [whatsappMessage]="contactBanner.whatsappMessage">
+</app-contact-banner>
+<app-footer></app-footer>
