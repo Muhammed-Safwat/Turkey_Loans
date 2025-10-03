@@ -1,4 +1,4 @@
-@import '../../../../public/scss/variables';
+@use '../../../../public/scss/_variables' as *;
 
 .privacy-policy-section {
   direction: rtl;

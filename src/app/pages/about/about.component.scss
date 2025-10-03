@@ -1,4 +1,4 @@
-@import '../../../../public/scss/variables';
+@use '../../../../public/scss/_variables' as *;
 
 .home-container {
   padding-top: 140px;
