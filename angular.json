@@ -20,6 +20,7 @@
             "outputPath": "dist/turkey-loans/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "allowedCommonJsDependencies": ["aos"],
             "polyfills": [
               "zone.js"
             ],
@@ -48,7 +49,12 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ] 
+            ] ,"stylePreprocessorOptions": {
+  "includePaths": [
+    "src/assets/scss"
+  ]
+}
+
           },
           "configurations": {
             "production": {
