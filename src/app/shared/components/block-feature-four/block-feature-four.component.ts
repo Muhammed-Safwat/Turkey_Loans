@@ -24,7 +24,7 @@ export class BlockFeatureFourComponent {
   readonly features: Feature[] = [
     {
       id: 1,
-      icon: '',
+      icon: 'chat-dots',
       title: 'استشارات تمويلية',
       description: 'نقدم لك التوجيه الصحيح لاختيار الحل الأنسب لك مع أقل هامش ربح وبطريقة شرعية.',
       link: '/services',
@@ -32,7 +32,7 @@ export class BlockFeatureFourComponent {
     },
     {
       id: 2,
-      icon: '',
+      icon: 'shield-check',
       title: 'سرية وأمان',
       description: 'نضمن لك سرعة إنجاز معاملاتك بسرية تامة وحماية كاملة لبياناتك.',
       link: '/services',
@@ -41,7 +41,7 @@ export class BlockFeatureFourComponent {
     },
     {
       id: 3,
-      icon: '',
+      icon: 'graph-up-arrow',
       title: 'إدارة التزاماتك',
       description: 'نساعدك في سداد المتعثرات وإعادة ترتيب التزاماتك المالية بما يناسب دخلك.',
       link: '/services',

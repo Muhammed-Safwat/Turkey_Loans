@@ -1,0 +1,161 @@
+// Mobile responsive text sizing
+@media screen and (max-width: 1024px) {
+  .title-one h2 {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title-one h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .text-lg {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title-one h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .text-lg {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title-one h2 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .text-lg {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+.text-lg {
+  font-size: 18px;
+}
+
+// Icon styling
+.icon {
+  i {
+    font-size: 2rem;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+}
+
+// Mobile responsive icons
+@media screen and (max-width: 768px) {
+  .icon i {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .icon i {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .icon i {
+    font-size: 1rem;
+  }
+}
+
+// Arrow button styling
+.arrow-btn {
+  i {
+    font-size: 1.5rem;
+    color: #29594B;
+    transition: all 0.3s ease;
+  }
+
+  &:hover i {
+    color: #29594B;
+    transform: translateX(-3px);
+  }
+}
+
+// Mobile responsive arrow button
+@media screen and (max-width: 768px) {
+  .arrow-btn i {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .arrow-btn i {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .arrow-btn i {
+    font-size: 0.9rem;
+  }
+}
+
+// Card content mobile responsiveness
+@media screen and (max-width: 768px) {
+  .card-style-six {
+    h4 {
+      font-size: 1.1rem !important;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 0.9rem !important;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-style-six {
+    h4 {
+      font-size: 1rem !important;
+      line-height: 1.4;
+    }
+
+    p {
+      font-size: 0.85rem !important;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-style-six {
+    h4 {
+      font-size: 0.95rem !important;
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 0.8rem !important;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Card hover effects
+.card-style-six {
+  &:hover {
+    .icon i {
+      color: #CFFF45;
+      transform: scale(1.1);
+    }
+  }
+}
+

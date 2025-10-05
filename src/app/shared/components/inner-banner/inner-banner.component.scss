@@ -1,0 +1,54 @@
+.hero-heading {
+  font-weight: 700;
+  font-size: 85px;
+  line-height: 1.023em;
+  margin: 22px 0 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-heading {
+    font-size: 42px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .text-lg {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .text-lg {
+    font-size: 10px;
+  }
+}
+
+.text-lg {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+@media screen and (max-width: 768px) {
+  .text-lg {
+    font-size: 14px;
+  }
+}
+
+.inner-banner-two  {
+  ul {
+    li {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner-banner-two  {
+    ul {
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+}

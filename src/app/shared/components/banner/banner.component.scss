@@ -962,9 +962,6 @@
   }
 
   .pager {
-    border-bottom: 1px solid #fff;
-    padding-bottom: 3px;
-
     li {
       color: rgba($color: #fff, $alpha: 0.5);
       margin-left: 5px;
@@ -1003,7 +1000,7 @@
   z-index: 1;
 
   .pager {
-    border-bottom: 1px solid #0A4020;
+    
     padding-bottom: 2px;
 
     li {

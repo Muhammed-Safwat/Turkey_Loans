@@ -1,3 +1,57 @@
+// Icon styling
+.icon {
+  i {
+    font-size: 2.5rem;
+    color: #29594B;
+    transition: all 0.3s ease;
+  }
+}
+
+// Arrow button styling
+.arrow-btn {
+  i {
+    font-size: 1.5rem;
+    color: #a8a9a9;
+    transition: all 0.3s ease;
+  }
+
+  &:hover i {
+    color: #29594B;
+    transform: translateX(-3px);
+  }
+}
+
+// Card hover effects
+.card-style-six {
+
+    .icon i {
+      color: #ffffff;;
+      transform: scale(1.1);
+    }
+
+}
+
+// Mobile responsive icons
+@media screen and (max-width: 768px) {
+  .icon i {
+    font-size: 2rem;
+  }
+
+  .arrow-btn i {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .icon i {
+    font-size: 1.75rem;
+  }
+
+  .arrow-btn i {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .block-feature-four {
     .title-one h2 {
@@ -18,3 +72,4 @@
     }
   }
 }
+
