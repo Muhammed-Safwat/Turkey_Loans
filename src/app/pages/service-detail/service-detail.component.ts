@@ -23,7 +23,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'loan-repayment',
       title: 'تسديد القروض بكافة أنواعها',
       description: 'سداد القروض الشخصية والتأجيرية وقرض السيارة والسكن والزواج في جميع البنوك وجميع المناطق',
-      icon: 'assets/images/icon/icon_20.svg',
+      icon: '',
       bannerTitle: 'تسديد القروض بكافة أنواعها',
       bannerDescription: 'نقدم خدمات تسديد القروض بجميع أنواعها مع أفضل الشروط والأسعار',
       features: [
@@ -58,7 +58,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'debt-settlement',
       title: 'تسديد المتعثرات وإيقاف الخدمات',
       description: 'سداد المتعثرات في سمه وسداد المديونيات المتعلقة وإيقاف سداد الخدمات',
-      icon: 'assets/images/icon/icon_21.svg',
+      icon: '',
       bannerTitle: 'تسديد المتعثرات وإيقاف الخدمات',
       bannerDescription: 'نساعدك في تسديد المتعثرات وإيقاف الخدمات بأفضل الطرق',
       features: [
@@ -93,7 +93,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'new-loans',
       title: 'استخراج قروض جديدة',
       description: 'استخراج قروض جديدة من كافة البنوك حتى 24 راتب وعرض بنكبن حتي 36 راتب',
-      icon: 'assets/images/icon/icon_22.svg',
+      icon: '',
       bannerTitle: 'استخراج قروض جديدة',
       bannerDescription: 'نساعدك في الحصول على أفضل القروض من جميع البنوك',
       features: [
@@ -129,7 +129,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'refinancing',
       title: 'إعادة التمويل',
       description: 'نسهل لك إعادة التمويل لجميع البنوك وتمويل لأي بنك وتمويل دون تحويل الراتب',
-      icon: 'assets/images/icon/icon_20.svg',
+      icon: '',
       bannerTitle: 'إعادة التمويل',
       bannerDescription: 'نساعدك في إعادة تمويل قروضك بأفضل الشروط والأسعار',
       features: [
@@ -164,7 +164,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'small-business-loans',
       title: 'قروض المؤسسات الصغيرة',
       description: 'استخراج قروض المؤسسات الصغيرة مع ملاءة مالية قوية ولا نؤجل العميل',
-      icon: 'assets/images/icon/icon_21.svg',
+      icon: '',
       bannerTitle: 'قروض المؤسسات الصغيرة',
       bannerDescription: 'نساعد المؤسسات الصغيرة في الحصول على التمويل المناسب',
       features: [
@@ -199,7 +199,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'salary-transfer',
       title: 'تحويل الراتب',
       description: 'تحويل الراتب من أي بنك لبنك آخر وتمويل لتسهيل دفعة العقار',
-      icon: 'assets/images/icon/icon_22.svg',
+      icon: '',
       bannerTitle: 'تحويل الراتب',
       bannerDescription: 'نساعدك في تحويل راتبك والحصول على أفضل العروض',
       features: [
@@ -234,7 +234,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'visa-companies-payment',
       title: 'سداد الفيزا والشركات',
       description: 'سداد الفيزا وإمكان والنايفات وكل شركات التكميلي',
-      icon: 'assets/images/icon/icon_20.svg',
+      icon: '',
       bannerTitle: 'سداد الفيزا والشركات',
       bannerDescription: 'نساعدك في سداد جميع التزاماتك المالية مع الشركات',
       features: [
@@ -269,7 +269,7 @@ export class ServiceDetailComponent implements OnInit {
       id: 'military-civilian-loans',
       title: 'قروض العسكريين والمدنيين',
       description: 'تسديد قروض العسكريين والمدنيين العاملين بالحكومة والشركات المعتمدة',
-      icon: 'assets/images/icon/icon_21.svg',
+      icon: '',
       bannerTitle: 'قروض العسكريين والمدنيين',
       bannerDescription: 'خدمات مخصصة للعسكريين والموظفين الحكوميين',
       features: [

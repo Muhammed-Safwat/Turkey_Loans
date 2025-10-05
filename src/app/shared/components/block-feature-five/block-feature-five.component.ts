@@ -24,7 +24,7 @@ export class BlockFeatureFiveComponent {
   readonly services: Service[] = [
     {
       id: 1,
-      icon: 'assets/images/icon/icon_23.svg',
+      icon: '',
       title: 'سداد القروض',
       description: 'حلول سريعة وموثوقة لسداد القروض والمتعثرات داخل المملكة.',
       link: '/services/1',
@@ -32,7 +32,7 @@ export class BlockFeatureFiveComponent {
     },
     {
       id: 2,
-      icon: 'assets/images/icon/icon_24.svg',
+      icon: '',
       title: 'استخراج تمويل',
       description: 'نساعدك في الحصول على قروض شخصية أو عقارية من البنوك والشركات.',
       link: '/services/2',
@@ -40,7 +40,7 @@ export class BlockFeatureFiveComponent {
     },
     {
       id: 3,
-      icon: 'assets/images/icon/icon_25.svg',
+      icon: '',
       title: 'رهن عقاري',
       description: 'إجراءات رهن عقاري مرنة وسريعة لتلبية احتياجاتك التمويلية.',
       link: '/services/3',
@@ -48,7 +48,7 @@ export class BlockFeatureFiveComponent {
     },
     {
       id: 4,
-      icon: 'assets/images/icon/icon_26.svg',
+      icon: '',
       title: 'تمويل شركات',
       description: 'ندعم أصحاب الشركات والمؤسسات بتمويلات شرعية مرنة وآمنة.',
       link: '/services/4',

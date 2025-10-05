@@ -11,21 +11,18 @@ import { Component, OnInit } from '@angular/core';
 export class WhatsappContactComponent implements OnInit {
   showWelcomeMessage = false;
   showPulse = true;
-  whatsappNumber = '966534970654'; // رقم واتساب الشركة
+  whatsappNumber = '966534970654';
   defaultMessage = 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات';
 
   ngOnInit() {
-    // إظهار رسالة الترحيب بعد 3 ثواني
     setTimeout(() => {
       this.showWelcomeMessage = true;
     }, 3000);
 
-    // إخفاء الرسالة تلقائياً بعد 10 ثواني
     setTimeout(() => {
       this.showWelcomeMessage = false;
     }, 10000);
 
-    // إيقاف تأثير النبضة بعد 15 ثانية
     setTimeout(() => {
       this.showPulse = false;
     }, 15000);

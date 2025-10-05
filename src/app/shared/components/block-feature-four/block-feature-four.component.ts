@@ -1,7 +1,6 @@
 import { Component, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { LanguageService } from '../../core/services/language.service';
 
 export interface Feature {
   id: number;
@@ -25,7 +24,7 @@ export class BlockFeatureFourComponent {
   readonly features: Feature[] = [
     {
       id: 1,
-      icon: 'assets/images/icon/icon_20.svg',
+      icon: '',
       title: 'استشارات تمويلية',
       description: 'نقدم لك التوجيه الصحيح لاختيار الحل الأنسب لك مع أقل هامش ربح وبطريقة شرعية.',
       link: '/services',
@@ -33,7 +32,7 @@ export class BlockFeatureFourComponent {
     },
     {
       id: 2,
-      icon: 'assets/images/icon/icon_21.svg',
+      icon: '',
       title: 'سرية وأمان',
       description: 'نضمن لك سرعة إنجاز معاملاتك بسرية تامة وحماية كاملة لبياناتك.',
       link: '/services',
@@ -42,7 +41,7 @@ export class BlockFeatureFourComponent {
     },
     {
       id: 3,
-      icon: 'assets/images/icon/icon_22.svg',
+      icon: '',
       title: 'إدارة التزاماتك',
       description: 'نساعدك في سداد المتعثرات وإعادة ترتيب التزاماتك المالية بما يناسب دخلك.',
       link: '/services',
@@ -50,5 +49,4 @@ export class BlockFeatureFourComponent {
     }
   ];
 
-  constructor(private languageService: LanguageService) {}
 }
