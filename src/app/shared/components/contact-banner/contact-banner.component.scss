@@ -1,0 +1,56 @@
+ .whatsapp-contact-section {
+   .whatsapp-btn {
+     background: #113D2F;
+     color: white;
+     padding: 15px 30px;
+     border-radius: 50px;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 1.1rem;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+     border: 1px solid white;
+
+     &:hover {
+       background: #0a261d;
+       transform: translateY(-2px);
+       box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+       color: white;
+       text-decoration: none;
+     }
+
+     i {
+       font-size: 1.3rem;
+       margin: 0 5px;
+     }
+   }
+ }
+
+ .fancy-banner-five h2 {
+   font-size: 65px;
+   line-height: 1.1em;
+ }
+
+ // Mobile responsive fonts
+ @media screen and (max-width: 768px) {
+   .whatsapp-contact-section {
+     .whatsapp-btn {
+       font-size: 12px !important;
+       padding: 10px 20px !important;
+
+       i {
+         font-size: 14px !important;
+       }
+     }
+   }
+
+   .fancy-banner-five h2 {
+     font-size: 24px !important;
+     line-height: 1.2 !important;
+   }
+
+   .fancy-banner-five p {
+     font-size: 12px !important;
+     line-height: 1.4 !important;
+   }
+ }

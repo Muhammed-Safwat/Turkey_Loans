@@ -1,0 +1,63 @@
+.footer-nav-link a {
+  direction: ltr;
+}
+
+// Footer Copyright Section
+.footer-copyright {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1000;
+
+  .copyright-text {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+    .company-link {
+      color: #CFFF45;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 2px 4px;
+      border-radius: 3px;
+
+      &:hover {
+        color: #DFFF5E;
+        background: rgba(207, 255, 69, 0.1);
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Mobile responsive
+  @media (max-width: 767px) {
+    padding: 10px 0;
+
+    .copyright-text {
+      font-size: 11px;
+      line-height: 1.4;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .copyright-text {
+      font-size: 10px;
+    }
+  }
+}
+
+
+.footer-two {
+  background: url('/assets/images/media/img_18.webp') no-repeat center bottom;
+  background-size: auto;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding: 110px 15px 135px;
+}

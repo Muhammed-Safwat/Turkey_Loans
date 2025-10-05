@@ -1,0 +1,21 @@
+@use '../../../../assets/scss/_variables' as *;
+
+.partner-swiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.partner-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}

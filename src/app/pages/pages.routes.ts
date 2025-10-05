@@ -7,14 +7,34 @@ export const pagesRoutes: Routes = [
   },
   {
     path: 'about',
-    loadComponent: () => import('../shared/components/about/about.component').then(m => m.AboutComponent)
+    loadComponent: () => import('./about/about.component').then(m => m.AboutComponent)
   },
   {
     path: 'contact',
-    loadComponent: () => import('../shared/components/contact/contact.component').then(m => m.ContactComponent)
+    loadComponent: () => import('../pages/contact-us/contact-us.component').then(m => m.ContactUsComponent)
+  },
+  {
+    path: 'services',
+    loadComponent: () => import('./services/services.component').then(m => m.ServicesComponent)
+  },
+  {
+    path: 'services/:id',
+    loadComponent: () => import('./service-detail/service-detail.component').then(m => m.ServiceDetailComponent)
+  },
+  {
+    path: 'privacy-policy',
+    loadComponent: () => import('./privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent)
+  },
+  {
+    path: 'terms-conditions',
+    loadComponent: () => import('./terms-conditions/terms-conditions.component').then(m => m.TermsConditionsComponent)
+  },
+  {
+    path: 'error',
+    loadComponent: () => import('./error/error.component').then(m => m.ErrorComponent)
   },
   {
     path: '**',
-    redirectTo: ''
+    loadComponent: () => import('./error/error.component').then(m => m.ErrorComponent)
   }
 ];

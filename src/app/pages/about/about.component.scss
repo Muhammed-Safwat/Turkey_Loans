@@ -1,0 +1,217 @@
+@use '../../../assets/scss/_variables' as *;
+
+.home-container {
+  padding-top: 140px;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding-top: 100px;
+  }
+}
+
+// About Section
+.about-section {
+  background: linear-gradient(135deg, $light-bg-one 0%, #ffffff 100%);
+
+  .about-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $heading;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(135deg, $color-two, $color-three);
+      border-radius: 2px;
+    }
+  }
+
+  .about-description {
+    .lead {
+      font-size: 1.4rem;
+      color: $text-color;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: $text-color;
+      line-height: 1.8;
+    }
+  }
+
+  .feature-item {
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid $light-bg-two;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      border-color: $color-two;
+    }
+  }
+
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, $color-two, $color-three);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    i {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+
+  .feature-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: $heading;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .feature-text {
+    font-size: 1rem;
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .about-mission {
+    .mission-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $heading;
+      margin-bottom: 2rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(135deg, $color-eleven, $color-one);
+        border-radius: 2px;
+      }
+    }
+
+    .mission-card {
+      padding: 40px 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1px solid $light-bg-two;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        border-color: $color-eleven;
+      }
+    }
+
+    .mission-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, $color-eleven, $color-one);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+
+      i {
+        font-size: 2.2rem;
+        color: $heading;
+      }
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $heading;
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      font-size: 1.1rem;
+      color: $text-color;
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .about-section {
+    .about-title {
+      font-size: 2.5rem;
+    }
+
+    .about-description {
+      .lead {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .feature-item {
+      padding: 25px 15px;
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+
+    .about-mission {
+      .mission-title {
+        font-size: 2rem;
+      }
+
+      .mission-card {
+        padding: 30px 20px;
+      }
+
+      .mission-icon {
+        width: 70px;
+        height: 70px;
+
+        i {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

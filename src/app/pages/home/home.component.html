@@ -1,5 +1,17 @@
 <div class="home-container">
   <app-header></app-header>
-  <app-language-switcher></app-language-switcher>
-
+  <app-banner></app-banner>
+  <app-text-feature></app-text-feature>
+  <app-block-feature-four></app-block-feature-four>
+  <app-text-feature-three></app-text-feature-three>
+  <app-block-feature-five></app-block-feature-five>
+  <app-feedback-section></app-feedback-section>
+  <app-contact-banner [title]="getContactBannerData().title"
+                      [description]="getContactBannerData().description"
+                      [whatsappNumber]="getContactBannerData().whatsappNumber"
+                      [phoneNumber]="getContactBannerData().phoneNumber"
+                      [email]="getContactBannerData().email"
+                      [whatsappMessage]="getContactBannerData().whatsappMessage">
+  </app-contact-banner>
+  <app-footer></app-footer>
 </div>

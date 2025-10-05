@@ -13,15 +13,15 @@ import { ISupportedLanguages } from '../../core/interfaces/supported-languages';
 })
 export class LanguageSwitcherComponent {
   constructor(private languageService: LanguageService) {}
-
+ 
   get currentLang(): ISupportedLanguages {
     return this.languageService.currentLanguage();
   }
-
+ 
   get currentDirection() {
     return this.languageService.direction();
   }
-
+ 
   get isRTL() {
     return this.languageService.isRTL();
   }

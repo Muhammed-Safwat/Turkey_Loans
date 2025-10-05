@@ -6,6 +6,7 @@ import { ISupportedLanguages } from '../interfaces/supported-languages';
   providedIn: 'root',
 })
 export class LanguageService {
+  /*
   constructor(private languageStore: LanguageStoreService) {}
 
   getCurrentLanguage(): ISupportedLanguages {
@@ -19,7 +20,7 @@ export class LanguageService {
   setLanguage(lang: ISupportedLanguages): void {
     this.languageStore.setLanguage(lang);
   }
-
+ 
   get currentLanguage() {
     return this.languageStore.currentLanguage;
   }
@@ -35,4 +36,5 @@ export class LanguageService {
   get state() {
     return this.languageStore.state;
   }
+  */
 }

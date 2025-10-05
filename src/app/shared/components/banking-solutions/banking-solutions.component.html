@@ -1,0 +1,44 @@
+<div class="block-feature-ten position-relative pt-100 pb-100 lg-pb-60">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 wow fadeInUp"
+           style="visibility: visible; animation-name: fadeInUp;">
+        <div class="title-one mb-50 lg-mb-20">
+          <h2>حلول مصرفية شاملة مع خدمات متميزة</h2>
+          <p class="text-lg mt-30">نقدم جميع الخدمات المصرفية والتمويلية بأعلى معايير الجودة وفقاً للمبادئ الإسلامية</p>
+        </div>
+      </div>
+    </div>
+    <div class="line-wrapper position-relative">
+      <div class="row gx-xxl-4">
+        <div class="col-lg-4 col-md-6 d-flex wow fadeInUp"
+             *ngFor="let service of services; let i = index"
+             [attr.data-wow-delay]="(i * 0.1) + 's'"
+             style="visibility: visible; animation-name: fadeInUp;">
+          <div class="card-style-six text-center vstack tran3s w-100 mt-30"
+               [class.active]="service.active">
+            <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+              <img [src]="service.icon"
+                   alt=""
+                   class="lazy-img"
+                   style="">
+            </div>
+            <h4 class="fw-bold mt-40 md-mt-30 mb-25">{{ service.title }}</h4>
+            <p class="mb-20">{{ service.description }}</p>
+            <a [routerLink]="['/services', service.id]"
+               class="arrow-btn tran3s m-auto stretched-link">
+              <img src="assets/imagesicon/icon_09.svg"
+                   alt=""
+                   class="lazy-img"
+                   style="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="assets/imagesshape/shape_05.svg"
+       alt=""
+       class="lazy-img shapes shape_01"
+       style="">
+</div>

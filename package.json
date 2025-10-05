@@ -4,7 +4,6 @@
   "description": "Sadad Koroud abo turkey | سداد قروض ابو تركي",
   "author": "IN TECH <info@intechdev.net>",
   "homepage": "https://www.intechdev.net",
-
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,7 +21,7 @@
     "management-system",
     "intech"
   ],
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/intechdev/turkey-loans.git"
   },
@@ -31,7 +30,7 @@
     "email": "info@intechdev.net"
   },
   "license": "MIT",
-   "dependencies": {
+  "dependencies": {
     "@angular/animations": "^19.1.0",
     "@angular/common": "^19.1.0",
     "@angular/compiler": "^19.1.0",
@@ -42,9 +41,11 @@
     "@angular/router": "^19.1.0",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^16.0.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
     "rxjs": "~7.8.0",
+    "swiper": "^12.0.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },

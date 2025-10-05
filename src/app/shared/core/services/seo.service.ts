@@ -136,7 +136,7 @@ export class SeoService {
         "url": "https://www.intechdev.net",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+966-54-946-7661",
+          "telephone": "+966-53-497-0654",
           "contactType": "customer service",
           "email": "info@intechdev.net"
         },

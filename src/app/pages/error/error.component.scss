@@ -1,0 +1,147 @@
+@use '../../../assets/scss/_variables' as *;
+
+.error-section {
+  background: linear-gradient(135deg, $light-bg-one 0%, #ffffff 100%);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+  .error-content {
+    .error-image {
+      opacity: 0.8;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: 900;
+      color: $color-two;
+      line-height: 1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .error-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $heading;
+      margin-bottom: 1.5rem;
+    }
+
+    .error-description {
+      font-size: 1.2rem;
+      color: $text-color;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .error-actions {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      .btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+
+        &.btn-primary {
+          background: linear-gradient(135deg, $color-two, $color-three);
+          border: none;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          }
+        }
+
+        &.btn-outline-primary {
+          color: $color-two;
+          border: 2px solid $color-two;
+
+          &:hover {
+            background: $color-two;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+    }
+
+    .error-suggestions {
+      .suggestions-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $heading;
+        margin-bottom: 2rem;
+      }
+
+      .suggestion-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 25px;
+        background: white;
+        color: $text-color;
+        text-decoration: none;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        font-weight: 500;
+        width: 100%;
+        justify-content: center;
+
+        &:hover {
+          color: $color-two;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          text-decoration: none;
+        }
+
+        i {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .error-section {
+    .error-content {
+      .error-code {
+        font-size: 6rem;
+      }
+
+      .error-title {
+        font-size: 2rem;
+      }
+
+      .error-description {
+        font-size: 1.1rem;
+      }
+
+      .error-actions {
+        .btn {
+          padding: 10px 25px;
+          font-size: 1rem;
+          margin-bottom: 10px;
+        }
+      }
+
+      .error-suggestions {
+        .suggestions-title {
+          font-size: 1.3rem;
+        }
+
+        .suggestion-link {
+          padding: 12px 20px;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}

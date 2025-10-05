@@ -1,0 +1,31 @@
+<div class="block-feature-four position-relative pt-100 pb-150 lg-pb-80">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-xl-8 col-lg-9 m-auto wow fadeInUp"
+           style="visibility: visible; animation-name: fadeInUp;">
+        <div class="title-one text-center mb-50 lg-mb-20">
+          <h2>{{ title }}</h2>
+        </div>
+        <!-- /.title-one -->
+      </div>
+    </div>
+    <div class="row gx-xxl-5">
+      <div class="col-lg-6 d-flex wow fadeInUp"
+           *ngFor="let area of areas; let i = index"
+           [attr.data-wow-delay]="(i * 0.1) + 's'"
+           style="visibility: visible; animation-name: fadeInUp;">
+        <div class="card-style-six text-center vstack tran3s w-100 mt-30">
+          <div class="icon rounded-circle d-flex align-items-center justify-content-center m-auto">
+            <img src="assets/imagesicon/icon_20.svg"
+                 alt=""
+                 class="lazy-img"
+                 style="">
+          </div>
+          <h4 class="fw-bold mt-40 md-mt-30 mb-25">{{ area.region }}</h4>
+          <p class="mb-20">{{ area.cities }}</p>
+        </div>
+        <!-- /.card-style-six -->
+      </div>
+    </div>
+  </div>
+</div>

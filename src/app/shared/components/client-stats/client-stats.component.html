@@ -1,0 +1,49 @@
+<div class="text-feature-three text-feature-seven position-relative mt-160 lg-mt-80 pb-200 lg-pb-120">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-5 col-lg-6 ms-auto d-flex flex-column order-lg-last wow fadeInRight"
+           style="visibility: visible; animation-name: fadeInRight;">
+        <div class="title-one">
+          <h2>{{ stats.title }}</h2>
+        </div>
+        <!-- /.title-one -->
+        <p class="text-lg mt-30 mb-55 lg-mb-30">{{ stats.description }}</p>
+        <ul class="style-none">
+          <li *ngFor="let feature of features">{{ feature }}</li>
+        </ul>
+        <div class="counter-wrapper mt-50 lg-mt-40 pt-25 lg-pt-10">
+          <div class="row">
+            <div class="col-xl-6 col-sm-5">
+              <div class="counter-block-one mt-20">
+                <div class="main-count fw-bold"><span class="counter">{{ stats.clientCount }}</span>k+</div>
+                <p class="m0">{{ stats.clientLabel }}</p>
+              </div>
+              <!-- /.counter-block-one -->
+            </div>
+            <div class="col-xl-6 col-sm-7">
+              <div class="counter-block-one mt-20">
+                <div class="main-count fw-bold"><span class="counter">{{ stats.amountCount }}</span>م+</div>
+                <p class="m0">{{ stats.amountLabel }}</p>
+              </div>
+              <!-- /.counter-block-one -->
+            </div>
+          </div>
+        </div>
+        <!-- /.counter-wrapper -->
+      </div>
+      <div class="col-xxl-6 col-lg-5 d-flex order-lg-first wow fadeInLeft"
+           style="visibility: visible; animation-name: fadeInLeft;">
+        <div class="media-wrapper w-100 position-relative">
+          <img src="assets/imagesassets/screen_04.svg"
+               alt=""
+               class="lazy-img shapes screen_01"
+               style="">
+          <img src="assets/imagesassets/screen_05.svg"
+               alt=""
+               class="lazy-img shapes screen_02"
+               style="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

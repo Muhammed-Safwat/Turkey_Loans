@@ -13,6 +13,7 @@ export interface LanguageState {
   providedIn: 'root'
 })
 export class LanguageStoreService {
+  /*
   private readonly LANGUAGE_KEY = 'app_language';
   private readonly supportedLanguages = ['en', 'ar'];
   private readonly defaultLanguage: ISupportedLanguages = 'ar';
@@ -161,5 +162,5 @@ export class LanguageStoreService {
     defaultLink.hreflang = 'x-default';
     defaultLink.href = `${baseUrl}ar`;
     document.head.appendChild(defaultLink);
-  }
+  }*/
 }

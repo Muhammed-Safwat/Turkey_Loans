@@ -1,0 +1,95 @@
+<div class="home-container">
+  <app-header></app-header>
+  <div class="about">
+    <section class="about-section pt-100 pb-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="about-content text-center">
+              <h1 class="about-title mb-40">من نحن</h1>
+
+              <div class="about-description mb-60">
+                <p class="lead mb-30">
+                  نحن شركة أبو تركي المتخصصة في تسديد القروض والمتعثرات، نقدم حلول مالية متكاملة لمساعدتك في التخلص من الديون وإعادة بناء وضعك المالي.
+                </p>
+              </div>
+
+              <div class="about-features">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6 mb-40">
+                    <div class="feature-item">
+                      <div class="feature-icon mb-20">
+                        <i class="bi bi-award"></i>
+                      </div>
+                      <h3 class="feature-title mb-15">خبرة واسعة</h3>
+                      <p class="feature-text">أكثر من 10 سنوات من الخبرة في المجال المالي</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-40">
+                    <div class="feature-item">
+                      <div class="feature-icon mb-20">
+                        <i class="bi bi-people"></i>
+                      </div>
+                      <h3 class="feature-title mb-15">فريق متخصص</h3>
+                      <p class="feature-text">فريق من الخبراء الماليين والقانونيين المتخصصين</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-40">
+                    <div class="feature-item">
+                      <div class="feature-icon mb-20">
+                        <i class="bi bi-shield-check"></i>
+                      </div>
+                      <h3 class="feature-title mb-15">متوافق مع الشريعة</h3>
+                      <p class="feature-text">جميع خدماتنا متوافقة مع الشريعة الإسلامية</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-40">
+                    <div class="feature-item">
+                      <div class="feature-icon mb-20">
+                        <i class="bi bi-graph-up"></i>
+                      </div>
+                      <h3 class="feature-title mb-15">حلول مضمونة</h3>
+                      <p class="feature-text">نقدم حلول مضمونة ومجربة لجميع أنواع القروض</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-40">
+                    <div class="feature-item">
+                      <div class="feature-icon mb-20">
+                        <i class="bi bi-headset"></i>
+                      </div>
+                      <h3 class="feature-title mb-15">خدمة عملاء متميزة</h3>
+                      <p class="feature-text">فريق خدمة عملاء متخصص ومتاح على مدار الساعة</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 mb-40">
+                    <div class="feature-item">
+                      <div class="feature-icon mb-20">
+                        <i class="bi bi-heart"></i>
+                      </div>
+                      <h3 class="feature-title mb-15">شفافية كاملة</h3>
+                      <p class="feature-text">نقدم معلومات واضحة ومفصلة عن جميع خدماتنا</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <app-block-feature-five></app-block-feature-five>
+  <app-contact-banner [title]="getContactBannerData().title"
+                      [description]="getContactBannerData().description"
+                      [whatsappNumber]="getContactBannerData().whatsappNumber"
+                      [phoneNumber]="getContactBannerData().phoneNumber"
+                      [email]="getContactBannerData().email"
+                      [whatsappMessage]="getContactBannerData().whatsappMessage">
+  </app-contact-banner>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,146 @@
+@use '../../../assets/scss/_variables' as *;
+
+.privacy-policy-section {
+  direction: rtl;
+  text-align: right;
+  min-height: 100vh;
+  margin-top: 50px;
+
+  .privacy-content {
+    padding: 60px;
+
+    @media (max-width: 768px) {
+      padding: 30px 20px;
+    }
+  }
+
+  .privacy-header {
+    border-bottom: 3px solid $color-two;
+    padding-bottom: 30px;
+
+    .privacy-title {
+      color: $heading;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        font-size: 2.2rem;
+      }
+    }
+
+    .privacy-subtitle {
+      color: $text-color;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+  }
+
+  .privacy-body {
+    .privacy-section {
+      .section-title {
+        color: $color-two;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        position: relative;
+        padding-right: 20px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 5px;
+          height: 30px;
+          background: $color-two;
+          border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+      }
+
+      .subsection-title {
+        color: $heading;
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+      }
+
+      .section-text {
+        color: $text-color;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      .privacy-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          position: relative;
+          padding-right: 25px;
+          margin-bottom: 12px;
+          color: $text-color;
+          font-size: 1.05rem;
+          line-height: 1.6;
+
+          &::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: $color-two;
+            font-weight: bold;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .contact-info {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 10px;
+        border-right: 4px solid $color-two;
+
+        p {
+          margin-bottom: 10px;
+          font-size: 1.1rem;
+
+          strong {
+            color: $color-two;
+            font-weight: 600;
+          }
+
+          a {
+            color: $color-two;
+            text-decoration: none;
+            font-weight: 600;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .privacy-policy-section {
+    .privacy-content {
+      margin: 0 10px;
+    }
+  }
+}

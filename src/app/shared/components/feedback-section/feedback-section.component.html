@@ -1,0 +1,68 @@
+<div class="feedback-section-two position-relative py-5">
+  <div class="container">
+    <div class="position-relative">
+      <div class="row">
+        <div class="col-lg-8 m-auto">
+          <div class="title-one text-center mb-80 lg-mb-40"
+               data-aos="fade-up">
+            <h2>نحن نساعد أكثر من 10 آلاف عميل لتحقيق أهدافهم المالية.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-wrapper">
+    <swiper-container class="feedback-swiper"
+                      slides-per-view="1"
+                      space-between="30"
+                      autoplay="true"
+                      autoplay-delay="5000"
+                      loop="true"
+                      speed="800"
+                      rtl="true"
+                      breakpoints='{
+        "768": {
+          "slidesPerView": 2,
+          "spaceBetween": 20,
+          "rtl": true
+        },
+        "1024": {
+          "slidesPerView": 3,
+          "spaceBetween": 30,
+          "rtl": true
+        }
+      }'>
+
+      <swiper-slide *ngFor="let testimonial of testimonials">
+        <div class="feedback-block-two tran3s">
+          <div class="d-flex align-items-center">
+            <img [src]="testimonial.avatar"
+                 alt=""
+                 class="avatar rounded-circle">
+            <div class="ps-3">
+              <div class="name fw-bold">{{ testimonial.name }}</div>
+              <p class="m0">{{ testimonial.location }}</p>
+            </div>
+          </div>
+          <blockquote class="text-lg">{{ testimonial.comment }}</blockquote>
+          <div class="bottom-line d-flex align-items-center justify-content-between">
+            <ul class="style-none d-flex rating">
+              <li *ngFor="let star of getStars(testimonial.rating)">
+                <i class="bi bi-star-fill"></i>
+              </li>
+            </ul>
+            <img src="assets/images/icon/icon_28.svg"
+                 alt=""
+                 class="icon">
+          </div>
+        </div>
+      </swiper-slide>
+
+    </swiper-container>
+  </div>
+  <img src="assets/images/lazy.svg"
+       data-src="assets/images/shape/shape_06.svg"
+       alt=""
+       class="lazy-img shapes shape_01">
+</div>

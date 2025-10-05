@@ -1,0 +1,325 @@
+@use './assets/scss/_variables' as *;
+@use './assets/scss/_mixins' as *;
+@use './assets/scss/_variables' as *;
+@use './assets/scss/_mixins' as *;
+@use './assets/scss/_base' as *;
+@use './assets/scss/_animation' as *;
+@use './assets/scss/_banner' as *;
+@use './assets/scss/_card' as *;
+@use './assets/scss/_contact' as *;
+@use './assets/scss/_element' as *;
+@use './assets/scss/_feedback' as *;
+@use './assets/scss/_footer' as *;
+@use './assets/scss/_header' as *;
+@use './assets/scss/_layout' as *;
+@use './assets/scss/_prefix' as *;
+@use './assets/scss/_project' as *;
+@use './assets/scss/_service' as *;
+@use './assets/scss/_shop' as *;
+@use './assets/scss/_vendor' as *;
+
+* {
+  font-family: $main-font;
+}
+
+body {
+  font-family: $main-font;
+  font-weight: normal;
+  font-size: 20px;
+  position: relative;
+  color: $text-color;
+}
+
+[dir="ltr"],
+html[dir="ltr"] body,
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+[dir="rtl"],
+html[dir="rtl"] body,
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] * {
+  direction: ltr;
+}
+
+html[dir="rtl"] * {
+  direction: rtl;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+/* Font family classes */
+.font-main {
+  font-family: $main-font;
+}
+
+.font-sub {
+  font-family: $sub-font;
+}
+
+.font-magnita {
+  font-family: $magnita;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $heading;
+  border-radius: 0;
+}
+
+/* Main page wrapper */
+.main-page-wrapper {
+  overflow-x: hidden;
+}
+
+/* Typography */
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+  font-weight: 500;
+  color: $heading;
+}
+
+.h1,
+h1 {
+  font-size: 85px;
+  line-height: 1.023em;
+}
+
+.h2,
+h2 {
+  font-size: 64px;
+  line-height: 1.1em;
+}
+
+.h4,
+h4 {
+  font-size: 24px;
+}
+
+p {
+  line-height: 1.7em;
+}
+
+.text-xl {
+  font-size: 28px;
+  line-height: 1.5em;
+}
+
+.text-lg {
+  font-size: 24px;
+  line-height: 1.583em;
+}
+
+.text-md {
+  font-size: 22px;
+}
+
+hr {
+  opacity: 0.09;
+  margin: 5px 0;
+}
+
+/* Utility Classes */
+.border-30 {
+  border-radius: 30px;
+}
+
+.border-40 {
+  border-radius: 40px;
+}
+
+.border-100 {
+  border-radius: 100px;
+}
+
+.shapes {
+  position: absolute;
+  z-index: -1;
+}
+
+.light-bg {
+  background-color: $light-bg-two;
+}
+
+.light-bg-deep {
+  background-color: $light-bg-one;
+}
+
+.light-bg-page-wrapper {
+  background: #edf8eb;
+}
+
+.color-deep {
+  color: $color-eight;
+}
+
+.box-layout {
+  margin: 30px;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  color: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+[type="email"],
+[type="number"],
+[type="tel"],
+[type="url"] {
+  outline: none;
+  /* Direction will be inherited from parent */
+}
+
+input,
+textarea {
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
+
+audio,
+video,
+canvas {
+  max-width: 100%;
+}
+
+iframe {
+  border: none !important;
+}
+
+.style-none {
+  list-style: none;
+  padding-right: 0;
+  margin-bottom: 0;
+}
+
+.p0 {
+  padding: 0 !important;
+}
+
+.m0 {
+  margin: 0 !important;
+}
+
+.theme-mb-0 {
+  margin-bottom: 0;
+}
+
+.theme-pb-0 {
+  padding-bottom: 0;
+}
+
+.partner-logo-one .logo {
+  height: 150px !important;
+}
+
+.btn-four {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-four svg {
+  width: 26px;
+}
+
+.logo h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #29594B;
+  letter-spacing: 1px;
+}
+
+.logo h1 span {
+  color: #10B981;
+}
+

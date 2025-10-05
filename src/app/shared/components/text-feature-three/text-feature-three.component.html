@@ -1,0 +1,57 @@
+<!--
+  =====================================================
+    Text Feature Three
+  =====================================================
+  -->
+<div class="text-feature-three position-relative mt-30 pb-150 lg-pb-80"
+     *ngFor="let feature of features; let i = index">
+  <div class="container">
+    <div class="row">
+      <div class="col-xxl-5 col-lg-6 ms-auto d-flex flex-column"
+           [class.order-lg-last]="!feature.isReversed"
+           [class.order-lg-first]="feature.isReversed"
+           data-aos="fade-right"
+           [attr.data-aos-delay]="i * 200">
+        <div class="title-one">
+          <div class="upper-title">{{ feature.upperTitle }}</div>
+          <h2>{{ feature.title }}</h2>
+        </div>
+        <p class="text-lg mt-45 lg-mt-30 mb-35 lg-mb-30">
+          {{ feature.description }}
+        </p>
+        <div>
+          <a [href]="feature.buttonLink"
+             class="btn-four mt-15">{{ feature.buttonText }}</a>
+        </div>
+        <div class="counter-wrapper mt-60 lg-mt-40 pt-25 lg-pt-10">
+          <div class="row">
+            <div class="col-xl-6 col-sm-5"
+                 *ngFor="let counter of feature.counters; let j = index">
+              <div class="counter-block-one mt-20">
+                <div class="main-count fw-bold">
+                  <span class="counter">{{ counter.value }}</span>+
+                </div>
+                <p class="m0">{{ counter.label }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-6 col-lg-5 d-flex"
+           [class.order-lg-first]="!feature.isReversed"
+           [class.order-lg-last]="feature.isReversed"
+           data-aos="fade-left"
+           [attr.data-aos-delay]="i * 200 + 100">
+        <div class="media-wrapper w-100 position-relative"
+             [class.offers]="feature.isReversed">
+          <!-- Media content can be added here -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <img src="/images/lazy.svg"
+       data-src="/images/shape/shape_06.svg"
+       alt=""
+       class="lazy-img shapes shape_01"
+       *ngIf="!feature.isReversed">
+</div>

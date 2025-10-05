@@ -8,7 +8,6 @@ import {
   NgModule,
   Pipe,
   Subject,
-  __spreadValues,
   concat,
   concatMap,
   defer,
@@ -27,7 +26,10 @@ import {
   ɵɵdefineNgModule,
   ɵɵdefinePipe,
   ɵɵgetInheritedFactory
-} from "./chunk-STDP6IXA.js";
+} from "./chunk-X3CTFLD7.js";
+import {
+  __spreadValues
+} from "./chunk-3OV72XIM.js";
 
 // node_modules/@ngx-translate/core/fesm2022/ngx-translate-core.mjs
 function _(key) {

@@ -1,0 +1,105 @@
+<header class="theme-main-menu menu-overlay menu-style-two sticky-menu">
+  <div class="gap-fix info-row">
+    <div class="d-md-flex justify-content-between">
+      <div class="greetings text-center">
+        <span class="fw-500">مرحباً بكم في موقع سداد أبو تركي</span>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <ul class="style-none d-none d-md-flex contact-info p-0">
+          <li style="direction: ltr;"
+              class="d-flex align-items-center gap-1">
+            <a class="fw-500"
+               (click)="openWhatsApp()"
+               style="cursor: pointer;"
+               aria-label="فتح الواتساب"
+               title="فتح الواتساب">+966 53 497 0654</a>
+            <img src="assets/images/icon/icon_15.svg"
+                 alt="Phone icon"
+                 class="lazy-img icon me-1">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="inner-content gap-fix">
+    <div class="top-header position-relative">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="logo order-lg-0">
+          <a routerLink="/"
+             class="d-flex align-items-center">
+            <img style="width:220px"
+                 src="assets/images/logo/logo-abotorky.svg"
+                 alt="أبو تركي">
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-3">
+          <nav class="navbar navbar-expand-lg p0 order-lg-2">
+            <button class="navbar-toggler d-block d-lg-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="تبديل القائمة">
+              <span></span>
+            </button>
+            <div class="collapse navbar-collapse"
+                 id="navbarNav">
+              <!-- Mobile close button -->
+              <div class="d-block d-lg-none text-end mb-3">
+                <button class="btn-close-mobile"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="إغلاق القائمة">
+                  <i class="bi bi-x-lg"></i>
+                  <span class="close-icon-fallback">×</span>
+                </button>
+              </div>
+              <ul class="navbar-nav align-items-lg-center w-100 justify-content-start">
+                <li class="d-block d-lg-none">
+                  <a routerLink="/"
+                     class="d-block">
+                    <img src="assets/images/logo/logo-abotorky.svg"
+                         alt="أبو تركي">
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"
+                     routerLink="/"
+                     role="button">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"
+                     routerLink="/services"
+                     role="button">الخدمات</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"
+                     routerLink="/about"
+                     role="button">من نحن</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"
+                     routerLink="/contact"
+                     role="button">تواصل معنا</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="right-widget order-lg-3">
+            <div class="d-flex align-items-center style-none">
+              <button class="btn-four"
+                      type="submit"
+                      (click)="openWhatsApp()">
+                <span>تواصل معنا</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
