@@ -1,0 +1,71 @@
+// Icon styling
+.icon {
+  i {
+    font-size: 2.5rem;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+}
+
+
+// Mobile responsive icons
+@media screen and (max-width: 768px) {
+  .icon i {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .icon i {
+    font-size: 1.75rem;
+  }
+}
+
+// Title responsive styling
+.title-one h2 {
+  color: #1a1a1a;
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 1.75rem;
+  }
+}
+
+// Card content styling
+.card-style-six {
+  h4 {
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 0.85rem;
+    }
+  }
+}

@@ -27,6 +27,60 @@
   }
 }
 
+// Icon styling
+.icon {
+  i {
+    font-size: 2.5rem;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+}
+
+// Arrow button styling
+.arrow-btn {
+  i {
+    font-size: 1.5rem;
+    color: #29594B;
+    transition: all 0.3s ease;
+  }
+
+}
+
+// Button seven styling
+.btn-seven {
+  .icon i {
+    font-size: 1.25rem;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  &:hover .icon i {
+    color: #CFFF45;
+    transform: translateX(-3px);
+  }
+}
+
+// Mobile responsive icons
+@media screen and (max-width: 768px) {
+  .icon i {
+    font-size: 2rem;
+  }
+
+  .arrow-btn i {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .icon i {
+    font-size: 1.75rem;
+  }
+
+  .arrow-btn i {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .title-one h2 {
     font-size: 42px;

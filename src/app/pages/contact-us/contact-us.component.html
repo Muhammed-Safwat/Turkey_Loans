@@ -3,8 +3,16 @@
   <div class="container">
     <div class="position-relative">
       <app-contact-info></app-contact-info>
-      <app-whatsapp-contact></app-whatsapp-contact>
+
     </div>
   </div>
 </div>
+  <app-contact-banner [title]="getContactBannerData().title"
+                      [description]="getContactBannerData().description"
+                      [whatsappNumber]="getContactBannerData().whatsappNumber"
+                      [phoneNumber]="getContactBannerData().phoneNumber"
+                      [email]="getContactBannerData().email"
+                      [whatsappMessage]="getContactBannerData().whatsappMessage">
+  </app-contact-banner>
+<app-whatsapp-contact></app-whatsapp-contact>
 <app-footer></app-footer>
