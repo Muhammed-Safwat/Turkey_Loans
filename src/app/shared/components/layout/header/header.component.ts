@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  private readonly whatsappNumber = '+966534970654';
+  private readonly whatsappNumber = '+966561527263';
 
   openWhatsApp(): void {
     try {

@@ -16,7 +16,7 @@ export class ContactUsComponent {
     title: 'تواصل معنا الآن',
     description: 'احصل على استشارة مجانية حول تسديد قروضك والمتعثرات',
     whatsappNumber: '966534970654',
-    phoneNumber: '+966534970654',
+    phoneNumber: '+966561527263',
     email: 'info@abuturki-loans.com',
     whatsappMessage: 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات'
   };

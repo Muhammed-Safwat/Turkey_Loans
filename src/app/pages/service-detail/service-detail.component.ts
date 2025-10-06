@@ -305,8 +305,8 @@ export class ServiceDetailComponent implements OnInit {
   contactBanner = {
     title: 'هل تحتاج مساعدة في هذا الخدمة؟',
     description: 'تواصل معنا الآن للحصول على استشارة مجانية',
-    whatsappNumber: '+966534970654',
-    phoneNumber: '+966534970654',
+    whatsappNumber: '+966561527263',
+    phoneNumber: '+966561527263',
     email: 'info@turkeyloans.com',
     whatsappMessage: 'مرحباً، أريد الاستفسار عن هذه الخدمة'
   };

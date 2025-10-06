@@ -20,7 +20,7 @@ export interface SocialLink {
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent { 
+export class FooterComponent {
 
   readonly quickLinks: FooterLink[] = [
     { text: 'الرئيسية', href: '/' },
@@ -36,7 +36,7 @@ export class FooterComponent {
   ];
 
   readonly contactInfo: FooterLink[] = [
-    { text: '+966 53 497 0654', href: 'tel:+966534970654' }, 
+    { text: '+966 56 152 7263', href: 'tel:+966561527263' },
   ];
 
   readonly socialLinks: SocialLink[] = [
