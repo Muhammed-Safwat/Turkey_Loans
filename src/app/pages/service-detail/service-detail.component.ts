@@ -6,6 +6,7 @@ import { FooterComponent } from '../../shared/components/layout/footer/footer.co
 import { InnerBannerComponent } from '../../shared/components/inner-banner/inner-banner.component';
 import { ContactBannerComponent } from '../../shared/components/contact-banner/contact-banner.component';
 import { ScrollService } from '../../shared/core/services/scroll.service';
+import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
 
 @Component({
   selector: 'app-service-detail',
@@ -305,16 +306,23 @@ export class ServiceDetailComponent implements OnInit {
   contactBanner = {
     title: 'هل تحتاج مساعدة في هذا الخدمة؟',
     description: 'تواصل معنا الآن للحصول على استشارة مجانية',
-    whatsappNumber: '+966561527263',
     phoneNumber: '+966561527263',
-    email: 'info@turkeyloans.com',
-    whatsappMessage: 'مرحباً، أريد الاستفسار عن هذه الخدمة'
+    email: 'info@turkeyloans.com'
   };
 
   constructor(
     private route: ActivatedRoute,
-    private scrollService: ScrollService
+    private scrollService: ScrollService,
+    private whatsappService: WhatsAppService
   ) { }
+
+  getContactBannerData(){
+    return {
+      ...this.contactBanner,
+      whatsappNumber: this.whatsappService.getWhatsAppNumber(),
+      whatsappMessage: this.whatsappService.getDefaultMessage()
+    };
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {

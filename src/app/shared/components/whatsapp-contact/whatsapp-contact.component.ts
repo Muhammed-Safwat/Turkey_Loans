@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { WhatsAppService } from '../../core/services/whatsapp.service';
 
 @Component({
   selector: 'app-whatsapp-contact',
@@ -11,8 +12,8 @@ import { Component, OnInit } from '@angular/core';
 export class WhatsappContactComponent implements OnInit {
   showWelcomeMessage = false;
   showPulse = true;
-  whatsappNumber = '966534970654';
-  defaultMessage = 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات';
+
+  constructor(public whatsappService: WhatsAppService) {}
 
   ngOnInit() {
     setTimeout(() => {
@@ -29,8 +30,7 @@ export class WhatsappContactComponent implements OnInit {
   }
 
   openWhatsApp() {
-    const message = encodeURIComponent(this.defaultMessage);
-    const whatsappUrl = `https://wa.me/${this.whatsappNumber}?text=${message}`;
+    const whatsappUrl = this.whatsappService.getWhatsAppLink();
     window.open(whatsappUrl, '_blank');
   }
 

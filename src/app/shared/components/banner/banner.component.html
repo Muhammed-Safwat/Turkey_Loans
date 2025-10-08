@@ -19,10 +19,9 @@
         </p>
         <form class="m-auto position-relative wow fadeInUp"
               data-wow-delay="0.2s"
-              onsubmit="event.preventDefault(); const message = this.querySelector('input').value || 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات'; window.open('https://wa.me/966534970654?text=' + encodeURIComponent(message), '_blank');">
+              (ngSubmit)="sendWhatsAppMessage()">
           <input type="text"
-                 placeholder="اكتب رسالتك هنا..."
-                 value="مرحباً، أريد الاستفسار عن خدماتكم">
+                 placeholder="السلام عليكم ورحمة الله وبركاتة"                 [(ngModel)]="messageText">
           <button class="btn-four"
                   type="submit">
             <span class="send-message">أرسل على واتساب</span>

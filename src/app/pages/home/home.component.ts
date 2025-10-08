@@ -10,6 +10,7 @@ import { FeedbackSectionComponent } from "../../shared/components/feedback-secti
 import { FooterComponent } from "../../shared/components/layout/footer/footer.component";
 import { ContactBannerComponent } from "../../shared/components/contact-banner/contact-banner.component";
 import { ScrollService } from '../../shared/core/services/scroll.service';
+import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
 
 @Component({
   selector: 'app-home',
@@ -34,16 +35,21 @@ export class HomeComponent implements OnInit {
   contactBanner = {
     title: 'تواصل معنا الآن',
     description: 'احصل على استشارة مجانية حول تسديد قروضك والمتعثرات',
-    whatsappNumber: '966534970654',
     phoneNumber: '+966561527263',
-    email: 'info@abuturki-loans.com',
-    whatsappMessage: 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات'
+    email: 'info@abuturki-loans.com'
   };
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(
+    private scrollService: ScrollService,
+    private whatsappService: WhatsAppService
+  ) {}
 
   getContactBannerData(){
-    return this.contactBanner;
+    return {
+      ...this.contactBanner,
+      whatsappNumber: this.whatsappService.getWhatsAppNumber(),
+      whatsappMessage: this.whatsappService.getDefaultMessage()
+    };
   }
 
   ngOnInit() {

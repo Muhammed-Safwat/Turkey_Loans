@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WhatsAppService } from '../../core/services/whatsapp.service';
 
 @Component({
   selector: 'app-contact-info',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './contact-info.component.scss'
 })
 export class ContactInfoComponent {
+
+  constructor(public whatsappService: WhatsAppService) {}
 
 }

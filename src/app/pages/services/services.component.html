@@ -14,11 +14,11 @@
 <app-coverage-areas [areas]="coverageAreas"
                     title="نحن نخدم جميع مناطق المملكة"></app-coverage-areas>
 
-<app-contact-banner [title]="contactBanner.title"
-                    [description]="contactBanner.description"
-                    [whatsappNumber]="contactBanner.whatsappNumber"
-                    [phoneNumber]="contactBanner.phoneNumber"
-                    [email]="contactBanner.email"
-                    [whatsappMessage]="contactBanner.whatsappMessage">
+<app-contact-banner [title]="getContactBannerData().title"
+                    [description]="getContactBannerData().description"
+                    [whatsappNumber]="getContactBannerData().whatsappNumber"
+                    [phoneNumber]="getContactBannerData().phoneNumber"
+                    [email]="getContactBannerData().email"
+                    [whatsappMessage]="getContactBannerData().whatsappMessage">
 </app-contact-banner>
 <app-footer></app-footer>

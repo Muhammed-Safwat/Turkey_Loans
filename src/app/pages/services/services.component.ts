@@ -9,6 +9,7 @@ import { CoverageAreasComponent } from '../../shared/components/coverage-areas/c
 import { ContactBannerComponent } from '../../shared/components/contact-banner/contact-banner.component';
 import { FooterComponent } from "../../shared/components/layout/footer/footer.component";
 import { ScrollService } from '../../shared/core/services/scroll.service';
+import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
 
 @Component({
   selector: 'app-services',
@@ -18,7 +19,10 @@ import { ScrollService } from '../../shared/core/services/scroll.service';
 })
 export class ServicesComponent implements OnInit {
 
-  constructor(private scrollService: ScrollService) { }
+  constructor(
+    private scrollService: ScrollService,
+    private whatsappService: WhatsAppService
+  ) { }
 
   ngOnInit(): void {
     this.scrollService.scrollToTop();
@@ -156,11 +160,17 @@ export class ServicesComponent implements OnInit {
   contactBanner = {
     title: 'تواصل معنا الآن',
     description: 'احصل على استشارة مجانية حول تسديد قروضك والمتعثرات',
-    whatsappNumber: '966534970654',
     phoneNumber: '+966561527263',
-    email: 'info@abuturki-loans.com',
-    whatsappMessage: 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات'
+    email: 'info@abuturki-loans.com'
   };
+
+  getContactBannerData(){
+    return {
+      ...this.contactBanner,
+      whatsappNumber: this.whatsappService.getWhatsAppNumber(),
+      whatsappMessage: this.whatsappService.getDefaultMessage()
+    };
+  }
 
 
 }

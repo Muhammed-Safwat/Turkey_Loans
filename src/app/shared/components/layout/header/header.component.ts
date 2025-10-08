@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { WhatsAppService } from '../../../core/services/whatsapp.service';
 
 @Component({
   selector: 'app-header',
@@ -10,17 +11,18 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  private readonly whatsappNumber = '+966561527263';
+
+  constructor(private whatsappService: WhatsAppService) {}
 
   openWhatsApp(): void {
     try {
-      const message = 'مرحباً، أريد الاستفسار عن خدمات تسديد القروض والمتعثرات';
-      const whatsappUrl = `https://wa.me/${this.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
+      const message = this.whatsappService.getDefaultMessage();
+      const whatsappUrl = this.whatsappService.getWhatsAppLinkWithCustomMessage(message);
 
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     } catch (error) {
       console.error('Error opening WhatsApp:', error);
-      const fallbackUrl = `https://wa.me/${this.whatsappNumber.replace(/[^0-9]/g, '')}`;
+      const fallbackUrl = this.whatsappService.getWhatsAppLinkWithoutMessage();
       window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
     }
   }

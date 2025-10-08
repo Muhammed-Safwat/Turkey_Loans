@@ -4,7 +4,7 @@
     <p class="text-white  pt-30 md-pt-10">{{ description }}</p>
     <div class="
        whatsapp-contact-section">
-      <a [href]="'https://wa.me/' + whatsappNumber + '?text=' + whatsappMessage"
+      <a [href]="getWhatsAppLink()"
          target="_blank"
          class="whatsapp-btn d-inline-flex align-items-center justify-content-center mt-30 mb-20">
         <i class="bi bi-whatsapp me-3"></i>
