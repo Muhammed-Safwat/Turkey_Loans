@@ -8,8 +8,8 @@ import { filter } from 'rxjs';
   providedIn: 'root'
 })
 export class SeoService {
-  private baseUrl = 'https://turkeyloans.intechdev.net';
-  private supportedLanguages = ['ar', 'en'];
+  private baseUrl = 'https://tasdedqorod.com';
+  private supportedLanguages = ['ar'];
 
   constructor(
     private meta: Meta,
@@ -46,106 +46,69 @@ export class SeoService {
   }
 
   private getLanguageFromUrl(url: string): string {
-    const segments = url.split('/');
-    const lang = segments[1];
-    return this.supportedLanguages.includes(lang) ? lang : 'ar';
+    return 'ar';
   }
 
   private updateTitle(language: string): void {
-    const titles = {
-      ar: 'Turkey Loans - نظام إدارة القروض التركية',
-      en: 'Turkey Loans - Turkish Loans Management System'
-    };
-
-    this.title.setTitle(titles[language as keyof typeof titles] || titles.ar);
+    this.title.setTitle('سداد قروض ابوتركي | حلول مالية متخصصة في السعودية | استشارة مجانية');
   }
 
   private updateMetaTags(language: string, currentUrl: string): void {
-    const descriptions = {
-      ar: 'نظام إدارة القروض التركية المتطور - حلول متكاملة لإدارة القروض والتمويل',
-      en: 'Advanced Turkish Loans Management System - Comprehensive solutions for loans and financing management'
-    };
-
-    const keywords = {
-      ar: 'قروض تركية, نظام إدارة, إدارة القروض, تمويل, Turkey Loans, Management System',
-      en: 'Turkish loans, management system, loan management, financing, Turkey Loans, Management System'
-    };
+    const description = '🏦 سداد القروض والمتعثرات في السعودية | استخراج تمويلات جديدة من البنوك | حلول مالية شرعية وآمنة | استشارة مجانية | تواصل الآن +966561527263';
+    const keywords = 'سداد قروض, قروض السعودية, تسديد المتعثرات, تمويل شخصي, قروض بنكية, أبو تركي, حلول مالية, استشارة مالية, إعادة تمويل, تسهيلات بنكية, قروض سريعة, حلول الديون, إدارة القروض, خدمات مالية, بنوك السعودية, الراجحي, الأهلي, سامبا, البنك الأهلي التجاري';
 
     // Basic meta tags
-    this.meta.updateTag({ name: 'description', content: descriptions[language as keyof typeof descriptions] || descriptions.ar });
-    this.meta.updateTag({ name: 'keywords', content: keywords[language as keyof typeof keywords] || keywords.ar });
-    this.meta.updateTag({ name: 'language', content: language });
-    this.meta.updateTag({ name: 'author', content: 'IN TECH' });
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({ name: 'keywords', content: keywords });
+    this.meta.updateTag({ name: 'language', content: 'ar' });
+    this.meta.updateTag({ name: 'author', content: 'أبو تركي للقروض' });
     this.meta.updateTag({ name: 'robots', content: 'index, follow' });
 
     // Open Graph tags
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:url', content: `${this.baseUrl}${currentUrl}` });
     this.meta.updateTag({ property: 'og:title', content: this.title.getTitle() });
-    this.meta.updateTag({ property: 'og:description', content: descriptions[language as keyof typeof descriptions] || descriptions.ar });
-    this.meta.updateTag({ property: 'og:locale', content: language === 'ar' ? 'ar_SA' : 'en_US' });
-    this.meta.updateTag({ property: 'og:site_name', content: 'Turkey Loans' });
+    this.meta.updateTag({ property: 'og:description', content: description });
+    this.meta.updateTag({ property: 'og:locale', content: 'ar_SA' });
+    this.meta.updateTag({ property: 'og:site_name', content: 'سداد قروض ابوتركي' });
 
     // Twitter Card tags
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
     this.meta.updateTag({ name: 'twitter:url', content: `${this.baseUrl}${currentUrl}` });
     this.meta.updateTag({ name: 'twitter:title', content: this.title.getTitle() });
-    this.meta.updateTag({ name: 'twitter:description', content: descriptions[language as keyof typeof descriptions] || descriptions.ar });
+    this.meta.updateTag({ name: 'twitter:description', content: description });
 
     // Geographic tags
-    this.meta.updateTag({ name: 'geo.region', content: language === 'ar' ? 'SA' : 'US' });
-    this.meta.updateTag({ name: 'geo.country', content: language === 'ar' ? 'SA' : 'US' });
+    this.meta.updateTag({ name: 'geo.region', content: 'SA' });
+    this.meta.updateTag({ name: 'geo.country', content: 'Saudi Arabia' });
   }
 
   private updateHreflangTags(currentUrl: string): void {
-    // Remove existing hreflang tags
-    const existingHreflang = document.querySelectorAll('link[rel="alternate"][hreflang]');
-    existingHreflang.forEach(link => link.remove());
-
-    // Get base URL without language
-    const urlWithoutLang = currentUrl.replace(/^\/[a-z]{2}/, '') || '/';
-
-    // Add hreflang tags for each supported language
-    this.supportedLanguages.forEach(lang => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.hreflang = lang;
-      link.href = `${this.baseUrl}/${lang}${urlWithoutLang}`;
-      document.head.appendChild(link);
-    });
-
-    // Add x-default hreflang (points to Arabic as default)
-    const defaultLink = document.createElement('link');
-    defaultLink.rel = 'alternate';
-    defaultLink.hreflang = 'x-default';
-    defaultLink.href = `${this.baseUrl}/ar${urlWithoutLang}`;
-    document.head.appendChild(defaultLink);
+    // No hreflang tags needed for single language site
   }
 
   private updateStructuredData(language: string): void {
     const structuredData = {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": language === 'ar' ? 'Turkey Loans - نظام إدارة القروض التركية' : 'Turkey Loans - Turkish Loans Management System',
-      "description": language === 'ar' ? 'نظام إدارة القروض التركية المتطور' : 'Advanced Turkish Loans Management System',
+      "@type": "FinancialService",
+      "name": "سداد قروض ابوتركي",
+      "description": "نساعدك في سداد القروض والمتعثرات واستخراج تمويلات جديدة من البنوك والشركات داخل المملكة العربية السعودية",
       "url": this.baseUrl,
-      "inLanguage": language,
-      "publisher": {
-        "@type": "Organization",
-        "name": "IN TECH",
-        "url": "https://www.intechdev.net",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+966-53-497-0654",
-          "contactType": "customer service",
-          "email": "info@intechdev.net"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "SA",
-          "addressLocality": "Riyadh"
-        }
-      }
+      "inLanguage": "ar",
+      "logo": `${this.baseUrl}/assets/images/logo/logo-abotorky.svg`,
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+966561527263",
+        "contactType": "customer service",
+        "availableLanguage": ["Arabic"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SA",
+        "addressRegion": "Riyadh"
+      },
+      "serviceType": "Financial Services",
+      "areaServed": "Saudi Arabia"
     };
 
     // Remove existing structured data

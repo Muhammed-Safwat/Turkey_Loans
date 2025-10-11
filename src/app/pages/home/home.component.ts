@@ -11,6 +11,7 @@ import { FooterComponent } from "../../shared/components/layout/footer/footer.co
 import { ContactBannerComponent } from "../../shared/components/contact-banner/contact-banner.component";
 import { ScrollService } from '../../shared/core/services/scroll.service';
 import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
+import { SeoService } from '../../shared/core/services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -41,7 +42,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private scrollService: ScrollService,
-    private whatsappService: WhatsAppService
+    private whatsappService: WhatsAppService,
+    private seoService: SeoService
   ) {}
 
   getContactBannerData(){
@@ -54,5 +56,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.scrollService.scrollToTop();
+    this.seoService.updateSEOTags();
   }
 }
