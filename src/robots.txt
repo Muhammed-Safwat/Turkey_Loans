@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://tasdedqorod.com/sitemap.xml
+Sitemap: https://tasdedqorod.com/assets/sitemap.xml
 
 # Crawl-delay for better server performance
 Crawl-delay: 1
