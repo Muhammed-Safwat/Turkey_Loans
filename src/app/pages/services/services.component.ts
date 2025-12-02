@@ -148,11 +148,11 @@ export class ServicesComponent implements OnInit {
 
   // Client stats data
   clientStats = {
-    title: '15,000+ عميل يثقون في خدماتنا',
+    title: '2K+ عميل يثقون في خدماتنا',
     description: 'نحن مجموعة مكاتب متخصصة في تسديد القروض والمتعثرات مع انتشار قوي في جميع أنحاء المملكة العربية السعودية',
-    clientCount: '15',
+    clientCount: '1.8',
     clientLabel: 'عميل راضي',
-    amountCount: '500',
+    amountCount: '1.3',
     amountLabel: 'ريال تم تسديده'
   };
 
