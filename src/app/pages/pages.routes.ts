@@ -29,7 +29,6 @@ export const pagesRoutes: Routes = [
     path: 'terms-conditions',
     loadComponent: () => import('./terms-conditions/terms-conditions.component').then(m => m.TermsConditionsComponent)
   },
-  // ─── صفحات SEO بـ URLs عربية ───────────────────────────────────────────
   {
     path: 'تسديد-قروض',
     loadComponent: () => import('./tasded-qurod/tasded-qurod.component').then(m => m.TasdedQurodComponent)
@@ -42,7 +41,6 @@ export const pagesRoutes: Routes = [
     path: 'تسديد-المتعثرات',
     loadComponent: () => import('./tasded-mutaathirat/tasded-mutaathirat.component').then(m => m.TasdedMutaathiratComponent)
   },
-  // ───────────────────────────────────────────────────────────────────────
   {
     path: 'error',
     loadComponent: () => import('./error/error.component').then(m => m.ErrorComponent)
