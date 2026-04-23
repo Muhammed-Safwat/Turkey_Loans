@@ -17,11 +17,12 @@
            data-wow-delay="0.1s">
           نساعدك في <strong>سداد القروض والمتعثرات</strong> واستخراج <strong>تمويلات جديدة</strong> من البنوك والشركات داخل المملكة، بطريقة شرعية وآمنة.
         </p>
-        <form class="m-auto position-relative wow fadeInUp"
+        <form class="form m-auto position-relative wow fadeInUp"
               data-wow-delay="0.2s"
               (ngSubmit)="sendWhatsAppMessage()">
           <input type="text"
-                 placeholder="السلام عليكم ورحمة الله وبركاتة"                 [(ngModel)]="messageText">
+                 placeholder="السلام عليكم ورحمة الله وبركاتة"
+                 [(ngModel)]="messageText">
           <button class="btn-four"
                   type="submit">
             <span class="send-message">أرسل على واتساب</span>

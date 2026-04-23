@@ -2,15 +2,18 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-xl-8 col-lg-9 m-auto">
-        <ul class="style-none d-inline-flex justify-content-center pager" *ngIf="breadcrumbItems.length > 0">
+        <ul class="style-none d-inline-flex justify-content-center pager pt-4"
+            *ngIf="breadcrumbItems.length > 0">
           <li *ngFor="let item of breadcrumbItems; let last = last">
-            <a [href]="item.link" *ngIf="item.link && !last">{{ item.label }}</a>
+            <a [href]="item.link"
+               *ngIf="item.link && !last">{{ item.label }}</a>
             <span *ngIf="!item.link || last">{{ item.label }}</span>
             <span *ngIf="!last">/</span>
           </li>
         </ul>
         <h1 class="hero-heading">{{ title }}</h1>
-        <p class="text-lg" *ngIf="description">{{ description }}</p>
+        <p class="text-lg"
+           *ngIf="description">{{ description }}</p>
       </div>
     </div>
   </div>
