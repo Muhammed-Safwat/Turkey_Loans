@@ -1,0 +1,207 @@
+<app-header></app-header>
+
+<app-inner-banner
+  title="تسديد المتعثرات في المملكة العربية السعودية"
+  description="حلول متكاملة لتسديد المتعثرات وتحسين سجلك في سمة وإيقاف الخدمات - استشارة مجانية"
+  [breadcrumbItems]="[
+    { label: 'الرئيسية', link: '/' },
+    { label: 'تسديد المتعثرات', link: '' }
+  ]">
+</app-inner-banner>
+
+<section class="seo-page-section pt-150 lg-pt-80 pb-100 lg-pb-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+
+        <div class="page-content">
+
+          <!-- Intro -->
+          <div class="page-intro mb-50">
+            <div class="section-icon mb-30">
+              <i class="bi bi-graph-down icon-large"></i>
+            </div>
+            <h1 class="page-title mb-20">تسديد المتعثرات وإيقاف الخدمات في السعودية</h1>
+            <p class="page-desc text-lg mb-20">
+              هل تعاني من <strong>متعثرات مالية</strong> مسجلة في سمة أو إيقاف لخدماتك الحكومية؟
+              أبو تركي للحلول المالية يقدم خدمات متكاملة في <strong>تسديد المتعثرات</strong>
+              والمديونيات البنكية، مع التفاوض مع الجهات المعنية للحصول على أفضل الشروط.
+            </p>
+            <p class="page-desc text-lg">
+              <strong>تسديد المتعثرات</strong> هو الخطوة الأولى نحو تحسين وضعك الائتماني والعودة
+              إلى مسار مالي صحي. نحن هنا لمساعدتك في كل خطوة، من التشخيص حتى التنفيذ.
+            </p>
+          </div>
+
+          <!-- Services -->
+          <div class="section-block mb-50">
+            <h2 class="section-title mb-30">خدماتنا في تسديد المتعثرات</h2>
+            <div class="row">
+              <div class="col-md-6 mb-25" *ngFor="let svc of services">
+                <div class="service-card">
+                  <div class="svc-icon mb-15">
+                    <i [class]="'bi ' + svc.icon"></i>
+                  </div>
+                  <h3 class="svc-title mb-10">{{ svc.title }}</h3>
+                  <p class="svc-desc mb-0">{{ svc.desc }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Steps -->
+          <div class="section-block mb-50">
+            <h2 class="section-title mb-30">مراحل تسديد المتعثرات معنا</h2>
+            <div class="process-steps">
+              <div class="process-step d-flex align-items-start mb-25" *ngFor="let item of steps">
+                <div class="step-number">{{ item.n }}</div>
+                <div class="step-content me-3">
+                  <h3 class="step-title mb-8">{{ item.title }}</h3>
+                  <p class="step-desc mb-0">{{ item.desc }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alert box -->
+          <div class="alert-box mb-50">
+            <div class="d-flex align-items-start">
+              <i class="bi bi-exclamation-triangle-fill alert-icon me-3"></i>
+              <div>
+                <h3 class="alert-title mb-10">لا تتأخر في تسديد المتعثرات!</h3>
+                <p class="alert-desc mb-0">
+                  تأخر تسديد المتعثرات يُفاقم الوضع ويزيد من الغرامات والمشاكل القانونية.
+                  تواصل معنا اليوم وابدأ في حل مشكلتك قبل أن تتفاقم.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ -->
+          <div class="section-block mb-50">
+            <h2 class="section-title mb-30">أسئلة شائعة حول تسديد المتعثرات</h2>
+            <div class="faq-list">
+              <div class="faq-item mb-25" *ngFor="let faq of faqs">
+                <h3 class="faq-question mb-10">
+                  <i class="bi bi-question-circle me-2"></i>
+                  {{ faq.q }}
+                </h3>
+                <p class="faq-answer mb-0">{{ faq.a }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="inline-cta mb-50">
+            <div class="cta-box">
+              <h2 class="cta-title mb-15">ابدأ تسديد متعثراتك الآن</h2>
+              <p class="cta-desc mb-25">استشارتك الأولى مجانية - تواصل معنا الآن وابدأ رحلة التعافي المالي</p>
+              <div class="cta-buttons d-flex flex-wrap gap-3 justify-content-center">
+                <a href="tel:+966561527263" class="btn btn-light">
+                  <i class="bi bi-telephone me-2"></i>
+                  اتصل الآن
+                </a>
+                <a href="https://wa.me/966534970654?text=مرحباً، أريد الاستفسار عن تسديد المتعثرات"
+                   class="btn btn-success" target="_blank" rel="noopener">
+                  <i class="bi bi-whatsapp me-2"></i>
+                  واتساب
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="page-sidebar">
+          <div class="contact-card mb-30">
+            <h4 class="card-title mb-20">تسديد متعثراتك فوراً</h4>
+            <div class="contact-info mb-20">
+              <div class="contact-item mb-15">
+                <i class="bi bi-telephone me-2"></i>
+                <a href="tel:+966561527263" class="contact-link">+966 56 152 7263</a>
+              </div>
+              <div class="contact-item mb-15">
+                <i class="bi bi-whatsapp me-2"></i>
+                <a href="https://wa.me/966534970654?text=مرحباً، أريد الاستفسار عن تسديد المتعثرات"
+                   class="contact-link" target="_blank" rel="noopener">واتساب مباشر</a>
+              </div>
+              <div class="contact-item mb-20">
+                <i class="bi bi-envelope me-2"></i>
+                <a href="mailto:info@tasdedqorod.com" class="contact-link">info&#64;tasdedqorod.com</a>
+              </div>
+            </div>
+            <a href="https://wa.me/966534970654?text=مرحباً، أريد الاستفسار عن تسديد المتعثرات"
+               class="btn btn-primary w-100" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp me-2"></i>
+              تواصل عبر واتساب
+            </a>
+          </div>
+
+          <div class="quick-info-card mb-30">
+            <h4 class="card-title mb-20">معلومات سريعة</h4>
+            <div class="info-item mb-15">
+              <strong>مدة التسوية:</strong>
+              <span>3-7 أيام عمل</span>
+            </div>
+            <div class="info-item mb-15">
+              <strong>الشمول:</strong>
+              <span>جميع المتعثرات</span>
+            </div>
+            <div class="info-item mb-15">
+              <strong>التغطية:</strong>
+              <span>كل مناطق المملكة</span>
+            </div>
+            <div class="info-item">
+              <strong>الاستشارة:</strong>
+              <span>مجانية</span>
+            </div>
+          </div>
+
+          <div class="related-links-card">
+            <h4 class="card-title mb-20">خدمات أخرى</h4>
+            <ul class="related-list">
+              <li class="mb-10">
+                <a routerLink="/تسديد-قروض">
+                  <i class="bi bi-arrow-left-short"></i>
+                  تسديد قروض
+                </a>
+              </li>
+              <li class="mb-10">
+                <a routerLink="/سداد-قروض">
+                  <i class="bi bi-arrow-left-short"></i>
+                  سداد قروض
+                </a>
+              </li>
+              <li class="mb-10">
+                <a routerLink="/services/refinancing">
+                  <i class="bi bi-arrow-left-short"></i>
+                  إعادة التمويل
+                </a>
+              </li>
+              <li>
+                <a routerLink="/contact">
+                  <i class="bi bi-arrow-left-short"></i>
+                  تواصل معنا
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-contact-banner
+  [title]="getContactBannerData().title"
+  [description]="getContactBannerData().description"
+  [whatsappNumber]="getContactBannerData().whatsappNumber"
+  [phoneNumber]="getContactBannerData().phoneNumber"
+  [email]="getContactBannerData().email"
+  [whatsappMessage]="getContactBannerData().whatsappMessage">
+</app-contact-banner>
+
+<app-footer></app-footer>

@@ -1,0 +1,210 @@
+<app-header></app-header>
+
+<app-inner-banner
+  title="سداد قروض في المملكة العربية السعودية"
+  description="خبراء في سداد القروض الشخصية والعقارية وقروض السيارات من جميع البنوك - استشارة مجانية واتصل الآن"
+  [breadcrumbItems]="[
+    { label: 'الرئيسية', link: '/' },
+    { label: 'سداد قروض', link: '' }
+  ]">
+</app-inner-banner>
+
+<section class="seo-page-section pt-150 lg-pt-80 pb-100 lg-pb-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+
+        <div class="page-content">
+
+          <!-- Intro -->
+          <div class="page-intro mb-50">
+            <div class="section-icon mb-30">
+              <i class="bi bi-coin icon-large"></i>
+            </div>
+            <h1 class="page-title mb-20">سداد قروض - أبو تركي للحلول المالية</h1>
+            <p class="page-desc text-lg mb-20">
+              تخلص من عبء <strong>سداد القروض</strong> مع أبو تركي للحلول المالية المتخصصة.
+              نقدم خدمات <strong>سداد القروض</strong> الشخصية والعقارية وقروض السيارات في جميع
+              مناطق المملكة العربية السعودية، مع استشارة مالية مجانية وخطة سداد مخصصة لوضعك.
+            </p>
+            <p class="page-desc text-lg">
+              نحن نؤمن أن <strong>سداد القروض</strong> لا يجب أن يكون عبئاً ثقيلاً. بخبرتنا الطويلة
+              في القطاع المالي، نساعدك في إيجاد أنسب الحلول لسداد قروضك بشروط مريحة وميسرة.
+            </p>
+          </div>
+
+          <!-- Advantages -->
+          <div class="section-block mb-50">
+            <h2 class="section-title mb-30">لماذا تختارنا لسداد قروضك؟</h2>
+            <div class="row">
+              <div class="col-md-6 mb-25" *ngFor="let adv of advantages">
+                <div class="advantage-item">
+                  <div class="adv-icon mb-10">
+                    <i [class]="'bi ' + adv.icon + ' text-success'"></i>
+                  </div>
+                  <h3 class="adv-title mb-10">{{ adv.title }}</h3>
+                  <p class="adv-desc mb-0">{{ adv.desc }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Loan Types -->
+          <div class="section-block mb-50">
+            <h2 class="section-title mb-30">أنواع القروض التي نتخصص في سدادها</h2>
+            <div class="loan-types">
+              <div class="loan-type-item mb-20" *ngFor="let loan of loanTypes">
+                <div class="d-flex align-items-start">
+                  <i class="bi bi-check2-circle text-success ms-0 me-3 mt-1"></i>
+                  <div>
+                    <h3 class="loan-title mb-5">{{ loan.title }}</h3>
+                    <p class="loan-desc mb-0">{{ loan.desc }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Requirements -->
+          <div class="section-block mb-50">
+            <h2 class="section-title mb-30">المستندات المطلوبة لسداد القروض</h2>
+            <div class="requirements-list">
+              <div class="req-item d-flex align-items-center mb-15" *ngFor="let req of requirements">
+                <i class="bi bi-file-earmark-check me-3"></i>
+                <span>{{ req }}</span>
+              </div>
+            </div>
+            <p class="note-text mt-20">
+              <i class="bi bi-info-circle me-2"></i>
+              قد تختلف المستندات المطلوبة بحسب نوع القرض والبنك. تواصل معنا للحصول على قائمة دقيقة لحالتك.
+            </p>
+          </div>
+
+          <!-- FAQ -->
+          <div class="section-block mb-50">
+            <h2 class="section-title mb-30">أسئلة شائعة حول سداد القروض</h2>
+            <div class="faq-list">
+              <div class="faq-item mb-25" *ngFor="let faq of faqs">
+                <h3 class="faq-question mb-10">
+                  <i class="bi bi-question-circle me-2"></i>
+                  {{ faq.q }}
+                </h3>
+                <p class="faq-answer mb-0">{{ faq.a }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="inline-cta mb-50">
+            <div class="cta-box">
+              <h2 class="cta-title mb-15">ابدأ رحلة سداد قروضك الآن</h2>
+              <p class="cta-desc mb-25">فريقنا جاهز لمساعدتك في سداد قروضك - استشارتك الأولى مجانية</p>
+              <div class="cta-buttons d-flex flex-wrap gap-3 justify-content-center">
+                <a href="tel:+966561527263" class="btn btn-primary">
+                  <i class="bi bi-telephone me-2"></i>
+                  اتصل الآن
+                </a>
+                <a href="https://wa.me/966534970654?text=مرحباً، أريد الاستفسار عن سداد القروض"
+                   class="btn btn-success" target="_blank" rel="noopener">
+                  <i class="bi bi-whatsapp me-2"></i>
+                  واتساب
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <div class="page-sidebar">
+          <div class="contact-card mb-30">
+            <h4 class="card-title mb-20">ابدأ سداد قروضك</h4>
+            <div class="contact-info mb-20">
+              <div class="contact-item mb-15">
+                <i class="bi bi-telephone me-2"></i>
+                <a href="tel:+966561527263" class="contact-link">+966 56 152 7263</a>
+              </div>
+              <div class="contact-item mb-15">
+                <i class="bi bi-whatsapp me-2"></i>
+                <a href="https://wa.me/966534970654?text=مرحباً، أريد الاستفسار عن سداد القروض"
+                   class="contact-link" target="_blank" rel="noopener">واتساب مباشر</a>
+              </div>
+              <div class="contact-item mb-20">
+                <i class="bi bi-envelope me-2"></i>
+                <a href="mailto:info@tasdedqorod.com" class="contact-link">info&#64;tasdedqorod.com</a>
+              </div>
+            </div>
+            <a href="https://wa.me/966534970654?text=مرحباً، أريد الاستفسار عن سداد القروض"
+               class="btn btn-primary w-100" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp me-2"></i>
+              تواصل عبر واتساب
+            </a>
+          </div>
+
+          <div class="quick-info-card mb-30">
+            <h4 class="card-title mb-20">معلومات سريعة</h4>
+            <div class="info-item mb-15">
+              <strong>المدة:</strong>
+              <span>1-3 أيام عمل</span>
+            </div>
+            <div class="info-item mb-15">
+              <strong>التغطية:</strong>
+              <span>كل مناطق المملكة</span>
+            </div>
+            <div class="info-item mb-15">
+              <strong>الضمان:</strong>
+              <span>100% مضمون</span>
+            </div>
+            <div class="info-item">
+              <strong>الاستشارة:</strong>
+              <span>مجانية</span>
+            </div>
+          </div>
+
+          <div class="related-links-card">
+            <h4 class="card-title mb-20">خدمات أخرى</h4>
+            <ul class="related-list">
+              <li class="mb-10">
+                <a routerLink="/تسديد-قروض">
+                  <i class="bi bi-arrow-left-short"></i>
+                  تسديد قروض
+                </a>
+              </li>
+              <li class="mb-10">
+                <a routerLink="/تسديد-المتعثرات">
+                  <i class="bi bi-arrow-left-short"></i>
+                  تسديد المتعثرات
+                </a>
+              </li>
+              <li class="mb-10">
+                <a routerLink="/services/refinancing">
+                  <i class="bi bi-arrow-left-short"></i>
+                  إعادة التمويل
+                </a>
+              </li>
+              <li>
+                <a routerLink="/contact">
+                  <i class="bi bi-arrow-left-short"></i>
+                  تواصل معنا
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-contact-banner
+  [title]="getContactBannerData().title"
+  [description]="getContactBannerData().description"
+  [whatsappNumber]="getContactBannerData().whatsappNumber"
+  [phoneNumber]="getContactBannerData().phoneNumber"
+  [email]="getContactBannerData().email"
+  [whatsappMessage]="getContactBannerData().whatsappMessage">
+</app-contact-banner>
+
+<app-footer></app-footer>

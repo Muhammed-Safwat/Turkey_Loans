@@ -133,6 +133,8 @@ export class SeoService {
   }): void {
     if (pageData.title) {
       this.title.setTitle(pageData.title);
+      this.meta.updateTag({ property: 'og:title', content: pageData.title });
+      this.meta.updateTag({ name: 'twitter:title', content: pageData.title });
     }
 
     if (pageData.description) {
@@ -149,5 +151,41 @@ export class SeoService {
       this.meta.updateTag({ property: 'og:image', content: pageData.image });
       this.meta.updateTag({ name: 'twitter:image', content: pageData.image });
     }
+  }
+
+  setCanonical(url: string): void {
+    let link: HTMLLinkElement | null = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      document.head.appendChild(link);
+    }
+    link.setAttribute('href', url);
+    this.meta.updateTag({ property: 'og:url', content: url });
+    this.meta.updateTag({ name: 'twitter:url', content: url });
+  }
+
+  addFaqSchema(faqs: { q: string; a: string }[]): void {
+    const existingFaq = document.querySelector('script[data-type="faq-schema"]');
+    if (existingFaq) existingFaq.remove();
+
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': faqs.map(faq => ({
+        '@type': 'Question',
+        'name': faq.q,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': faq.a
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-type', 'faq-schema');
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
   }
 }
