@@ -115,7 +115,6 @@
       top: 0;
       bottom: 0;
       border-radius: 50px;
-
     }
   }
 
@@ -145,6 +144,274 @@
     top: 49%;
     right: 0;
     width: 15%;
+  }
+}
+
+// ─── Custom Banner Layout ───────────────────────────────────────────────────
+.banner-custom {
+  padding: 60px 0 60px;
+
+  // ── العنوان (تحت الصور) ────────────────────────────────────────────────
+  .hero-heading {
+    font-size: 58px;
+    line-height: 1.25em;
+    margin-bottom: 28px;
+    margin-top: 16px;
+
+    span {
+      z-index: 1;
+
+      .underline-shape {
+        position: absolute;
+        width: 100%;
+        bottom: -55%;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  // ── الصورتان ───────────────────────────────────────────────────────────
+  .banner-imgs-row {
+    margin-bottom: 60px;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .img-wrap {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13);
+    height: 100%;
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      min-height: 320px;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover .banner-img {
+      transform: scale(1.03);
+    }
+
+    &--large .banner-img {
+      min-height: 400px;
+    }
+
+    &--small .banner-img {
+      min-height: 400px;
+    }
+
+    .img-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      direction: rtl;
+      backdrop-filter: blur(6px);
+
+      .badge-num {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+      }
+
+      .badge-txt {
+        font-size: 12px;
+        opacity: 0.85;
+        display: block;
+        margin-top: 2px;
+      }
+
+      &--dark {
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+      }
+
+      &--green {
+        background: rgba(13, 138, 91, 0.85);
+        color: #fff;
+      }
+    }
+  }
+
+  // ── النص ───────────────────────────────────────────────────────────────
+  .mt-60 {
+    margin-top: 60px;
+  }
+
+  .content-para {
+    font-size: 16.5px;
+    line-height: 2em;
+    color: #444;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  // ── لماذا نحن ──────────────────────────────────────────────────────────
+  .why-section {
+    background: #f7faf9;
+    border-radius: 20px;
+    padding: 36px 40px;
+    margin: 36px 0;
+    text-align: right;
+  }
+
+  .why-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 28px;
+    position: relative;
+    padding-right: 18px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 4px;
+      background: #0d8a5b;
+      border-radius: 4px;
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 18px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  // ── فورم الواتساب ──────────────────────────────────────────────────────
+  .form-cta-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  form {
+    max-width: 580px;
+    height: 68px;
+    box-shadow: 0 10px 30px rgba(8, 32, 26, 0.08);
+    border-radius: 50px;
+
+    input {
+      font-size: 16px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      background: #fff;
+      border: none;
+      padding: 0 30px 0 90px;
+      text-align: right;
+    }
+
+    button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 50px;
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  // ── Responsive ─────────────────────────────────────────────────────────
+  @media (max-width: 991px) {
+    padding: 70px 0 40px;
+
+    .hero-heading {
+      font-size: 40px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      margin-bottom: 36px;
+    }
+
+    .img-wrap--large .banner-img,
+    .img-wrap--small .banner-img {
+      min-height: 260px;
+    }
+
+    .why-section {
+      padding: 28px 24px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero-heading {
+      font-size: 32px;
+    }
+
+    .img-wrap--large .banner-img,
+    .img-wrap--small .banner-img {
+      min-height: 200px;
+    }
+
+    form {
+      height: 60px;
+
+      input {
+        font-size: 14px;
+        padding: 0 20px 0 70px;
+      }
+    }
   }
 }
 

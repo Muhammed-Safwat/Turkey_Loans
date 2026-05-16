@@ -1,24 +1,42 @@
-<div class="hero-banner-two light-bg pt-100 pb-85 position-relative"
+<div class="hero-banner-two light-bg position-relative banner-custom"
      dir="rtl">
-  <div class="container position-relative">
-    <div class="row">
-      <div class="col-lg-10 m-auto">
-        <h1 class="hero-heading text-center fw-bold wow fadeInUp mt-10">
-          حلولك التمويلية لجميع احتياجاتك المالية<br>
-          <span class="d-inline-block position-relative">داخل المملكة العربية السعودية
-            <img src="assets/images/shape/shape_04.svg"
-                 data-src="assets/images/shape/shape_04.svg"
-                 alt="شكل زخرفي لموقع سداد قروض ابوتركي"
-                 class="lazy-img">
-          </span>
-        </h1>
-        <p style="padding-top: 100px;"
-           class="  text-center pt-35 pb-35 wow fadeInUp"
-           data-wow-delay="0.1s">
-          نساعدك في <strong>سداد القروض والمتعثرات</strong> واستخراج <strong>تمويلات جديدة</strong> من البنوك والشركات داخل المملكة، بطريقة شرعية وآمنة.
+  <div class="container">
+
+    <!-- ── الصورتان في وسط الصفحة ────────────────────────────────────── -->
+    <div class="row banner-imgs-row wow fadeInUp"
+         data-wow-delay="0.15s">
+      <div class="col-lg-7 col-md-7 col-12 mb-3 mb-md-0">
+        <div class="img-wrap img-wrap--large">
+          <img src="assets/images/banner/banner-1.jpeg"
+               alt="تسديد القروض والمتعثرات في المملكة العربية السعودية"
+               class="banner-img">
+          <div class="img-badge img-badge--dark">
+            <span class="badge-num">+500</span>
+            <span class="badge-txt">عميل راضٍ</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-5 col-12">
+        <div class="img-wrap img-wrap--small">
+          <img src="assets/images/banner/banner-2.png"
+               alt="حلول تمويلية وسداد قروض بطريقة شرعية وآمنة"
+               class="banner-img">
+          <div class="img-badge img-badge--green">
+            <span class="badge-num">100%</span>
+            <span class="badge-txt">سرية وأمان</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── فورم الواتساب ──────────────────────────────────────────────── -->
+    <div class="row wow fadeInUp"
+         data-wow-delay="0.2s">
+      <div class="col-lg-7 m-auto text-center">
+        <p class="form-cta-text">
+          ابدأ الآن وأرسل تفاصيل حالتك عبر واتساب للحصول على استشارة مجانية وسريعة
         </p>
-        <form class="form m-auto position-relative wow fadeInUp"
-              data-wow-delay="0.2s"
+        <form class="form m-auto position-relative"
               (ngSubmit)="sendWhatsAppMessage()">
           <input type="text"
                  placeholder="السلام عليكم ورحمة الله وبركاتة"
@@ -40,9 +58,11 @@
         </form>
       </div>
     </div>
+
+    <!-- ── الشركاء ──────────────────────────────────────────────────────── -->
     <div class="row">
       <div class="col-xl-10 m-auto">
-        <div class="partner-logo-one pt-80 md-p-70">
+        <div class="partner-logo-one pt-70 md-p-70">
           <p class="fw-500 text-dark text-center mb-40">
             <span class="text-decoration-underline">شركاؤنا</span> من كبرى البنوك والمؤسسات المالية السعودية
           </p>
@@ -50,13 +70,6 @@
         </div>
       </div>
     </div>
+
   </div>
-  <!--<img src="assets/images/lazy.svg"
-       data-src="assets/images/shape/shape_05.svg"
-       alt=""
-       class="lazy-img shapes shape_01">
-  <img src="assets/images/lazy.svg"
-       data-src="assets/images/shape/shape_06.svg"
-       alt=""
-       class="lazy-img shapes shape_02">-->
 </div>
