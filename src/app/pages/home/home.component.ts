@@ -9,6 +9,7 @@ import { BlockFeatureFiveComponent } from "../../shared/components/block-feature
 import { FeedbackSectionComponent } from "../../shared/components/feedback-section/feedback-section.component";
 import { FooterComponent } from "../../shared/components/layout/footer/footer.component";
 import { ContactBannerComponent } from "../../shared/components/contact-banner/contact-banner.component";
+import { LoanIntroComponent } from "../../shared/components/loan-intro/loan-intro.component";
 import { ScrollService } from '../../shared/core/services/scroll.service';
 import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
 import { SeoService } from '../../shared/core/services/seo.service';
@@ -20,6 +21,7 @@ import { SeoService } from '../../shared/core/services/seo.service';
     CommonModule,
     HeaderComponent,
     BannerComponent,
+    LoanIntroComponent,
     TextFeatureComponent,
     BlockFeatureFourComponent,
     TextFeatureThreeComponent,
