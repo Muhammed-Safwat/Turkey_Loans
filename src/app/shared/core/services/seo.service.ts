@@ -88,7 +88,7 @@ export class SeoService {
       "description": "نساعدك في سداد القروض والمتعثرات واستخراج تمويلات جديدة من البنوك والشركات داخل المملكة العربية السعودية",
       "url": this.baseUrl,
       "inLanguage": "ar",
-      "logo": `${this.baseUrl}/assets/images/logo/logo-abotorky.svg`,
+      "logo": `${this.baseUrl}/assets/images/logo/logo-abotorky.png`,
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+966561527263",
