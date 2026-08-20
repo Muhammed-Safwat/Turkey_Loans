@@ -85,7 +85,7 @@ export class TasdedMutaathiratComponent implements OnInit {
       description: 'تسديد المتعثرات وتحسين سمة وإيقاف الخدمات في السعودية ✅ حلول سريعة للمديونيات البنكية ✅ تفاوض مع البنوك ✅ استشارة مجانية +966561527263',
       keywords: 'تسديد المتعثرات, تسوية المتعثرات, سمة, إيقاف الخدمات, المديونيات, تحسين سمة, تسديد ديون, المتعثرات المالية في السعودية'
     });
-    this.seoService.setCanonical('https://tasdedqorod.com/تسديد-المتعثرات');
+    this.seoService.setCanonical('https://www.tasdedqorod.com/تسديد-المتعثرات');
     this.seoService.addFaqSchema(this.faqs);
   }
 }

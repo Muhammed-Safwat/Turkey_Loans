@@ -90,7 +90,7 @@ export class TasdedQurodComponent implements OnInit {
       description: 'تسديد قروض شخصية وعقارية وسيارات من جميع البنوك السعودية ✅ شروط ميسرة وخدمة سريعة ✅ تغطية جميع مناطق المملكة ✅ تواصل الآن +966561527263',
       keywords: 'تسديد قروض, تسديد القروض, تسديد قروض الراجحي, تسديد قروض شخصية, تسديد قروض السيارات, تسديد قروض البنك الأهلي, تسديد قروض في السعودية'
     });
-    this.seoService.setCanonical('https://tasdedqorod.com/تسديد-قروض');
+    this.seoService.setCanonical('https://www.tasdedqorod.com/تسديد-قروض');
     this.seoService.addFaqSchema(this.faqs);
   }
 }

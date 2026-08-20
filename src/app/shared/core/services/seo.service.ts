@@ -8,7 +8,7 @@ import { filter } from 'rxjs';
   providedIn: 'root'
 })
 export class SeoService {
-  private baseUrl = 'https://tasdedqorod.com';
+  private baseUrl = 'https://www.tasdedqorod.com';
   private supportedLanguages = ['ar'];
 
   constructor(

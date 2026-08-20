@@ -6,6 +6,7 @@ import { HeaderComponent } from "../../shared/components/layout/header/header.co
 import { ContactBannerComponent } from "../../shared/components/contact-banner/contact-banner.component";
 import { ScrollService } from '../../shared/core/services/scroll.service';
 import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
+import { SeoService } from '../../shared/core/services/seo.service';
 
 
 @Component({
@@ -33,10 +34,17 @@ export class AboutComponent implements OnInit {
 
   constructor(
     private scrollService: ScrollService,
-    private whatsappService: WhatsAppService
+    private whatsappService: WhatsAppService,
+    private seoService: SeoService
   ) {}
 
   ngOnInit() {
     this.scrollService.scrollToTop();
+    this.seoService.updatePageSEO({
+      title: 'من نحن | أبو تركي لتسديد القروض والمتعثرات في السعودية',
+      description: 'تعرف على شركة أبو تركي لحلول تسديد القروض والمتعثرات في المملكة العربية السعودية ✅ خبرة واسعة وثقة عملائنا ✅ استشارة مجانية ✅ تواصل الآن +966561527263',
+      keywords: 'من نحن, أبو تركي, شركة تسديد قروض, حلول مالية السعودية, عن الشركة'
+    });
+    this.seoService.setCanonical('https://www.tasdedqorod.com/about');
   }
 }

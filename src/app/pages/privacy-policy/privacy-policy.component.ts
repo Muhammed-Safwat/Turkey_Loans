@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../../shared/components/layout/footer/footer.component';
 import { HeaderComponent } from '../../shared/components/layout/header/header.component';
- 
+import { SeoService } from '../../shared/core/services/seo.service';
+
 @Component({
   selector: 'app-privacy-policy',
   standalone: true,
@@ -13,9 +14,14 @@ import { HeaderComponent } from '../../shared/components/layout/header/header.co
 })
 export class PrivacyPolicyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private seoService: SeoService) { }
 
   ngOnInit(): void {
+    this.seoService.updatePageSEO({
+      title: 'سياسة الخصوصية | أبو تركي لتسديد القروض',
+      description: 'سياسة الخصوصية الخاصة بموقع أبو تركي لتسديد القروض والمتعثرات في المملكة العربية السعودية'
+    });
+    this.seoService.setCanonical('https://www.tasdedqorod.com/privacy-policy');
   }
 
   getCurrentDate(): string {

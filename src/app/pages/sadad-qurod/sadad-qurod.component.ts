@@ -93,7 +93,7 @@ export class SadadQurodComponent implements OnInit {
       description: 'سداد قروض شخصية وعقارية وسيارات في جميع أنحاء المملكة ✅ استشارة مجانية ✅ خبرة واسعة مع جميع البنوك السعودية ✅ اتصل الآن +966561527263',
       keywords: 'سداد قروض, سداد القروض, سداد قروض شخصية, سداد قروض السيارات, سداد قروض السكن, سداد قروض في السعودية, سداد مبكر للقروض'
     });
-    this.seoService.setCanonical('https://tasdedqorod.com/سداد-قروض');
+    this.seoService.setCanonical('https://www.tasdedqorod.com/سداد-قروض');
     this.seoService.addFaqSchema(this.faqs);
   }
 }

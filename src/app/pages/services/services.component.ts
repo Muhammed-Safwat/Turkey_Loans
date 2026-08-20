@@ -10,6 +10,7 @@ import { ContactBannerComponent } from '../../shared/components/contact-banner/c
 import { FooterComponent } from "../../shared/components/layout/footer/footer.component";
 import { ScrollService } from '../../shared/core/services/scroll.service';
 import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
+import { SeoService } from '../../shared/core/services/seo.service';
 
 @Component({
   selector: 'app-services',
@@ -21,11 +22,18 @@ export class ServicesComponent implements OnInit {
 
   constructor(
     private scrollService: ScrollService,
-    private whatsappService: WhatsAppService
+    private whatsappService: WhatsAppService,
+    private seoService: SeoService
   ) { }
 
   ngOnInit(): void {
     this.scrollService.scrollToTop();
+    this.seoService.updatePageSEO({
+      title: 'خدماتنا | تسديد قروض ومتعثرات واستخراج تمويلات جديدة',
+      description: 'تعرف على جميع خدماتنا المالية: تسديد القروض، تسديد المتعثرات، استخراج تمويلات جديدة، إعادة التمويل وغيرها ✅ استشارة مجانية ✅ تواصل الآن +966561527263',
+      keywords: 'خدماتنا, خدمات تسديد القروض, خدمات مالية السعودية, تسديد متعثرات, إعادة تمويل'
+    });
+    this.seoService.setCanonical('https://www.tasdedqorod.com/services');
   }
 
   services = [

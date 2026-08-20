@@ -7,6 +7,7 @@ import { InnerBannerComponent } from '../../shared/components/inner-banner/inner
 import { ContactBannerComponent } from '../../shared/components/contact-banner/contact-banner.component';
 import { ScrollService } from '../../shared/core/services/scroll.service';
 import { WhatsAppService } from '../../shared/core/services/whatsapp.service';
+import { SeoService } from '../../shared/core/services/seo.service';
 
 @Component({
   selector: 'app-service-detail',
@@ -313,7 +314,8 @@ export class ServiceDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private scrollService: ScrollService,
-    private whatsappService: WhatsAppService
+    private whatsappService: WhatsAppService,
+    private seoService: SeoService
   ) { }
 
   getContactBannerData(){
@@ -330,6 +332,14 @@ export class ServiceDetailComponent implements OnInit {
       this.service = this.services.find(s => s.id === this.serviceId);
       // Scroll to top when service changes
       this.scrollService.scrollToTop();
+
+      if (this.service) {
+        this.seoService.updatePageSEO({
+          title: `${this.service.title} | أبو تركي لتسديد القروض`,
+          description: `${this.service.description} ✅ استشارة مجانية ✅ تواصل الآن +966561527263`
+        });
+        this.seoService.setCanonical(`https://www.tasdedqorod.com/services/${this.serviceId}`);
+      }
     });
   }
 }
