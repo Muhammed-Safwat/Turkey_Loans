@@ -91,6 +91,10 @@ export class TasdedQurodComponent implements OnInit {
       keywords: 'تسديد قروض, تسديد القروض, تسديد قروض الراجحي, تسديد قروض شخصية, تسديد قروض السيارات, تسديد قروض البنك الأهلي, تسديد قروض في السعودية'
     });
     this.seoService.setCanonical('https://www.tasdedqorod.com/تسديد-قروض');
+    this.seoService.setBreadcrumbs([
+      { label: 'الرئيسية', url: 'https://www.tasdedqorod.com/' },
+      { label: 'تسديد قروض', url: 'https://www.tasdedqorod.com/تسديد-قروض' }
+    ]);
     this.seoService.addFaqSchema(this.faqs);
   }
 }

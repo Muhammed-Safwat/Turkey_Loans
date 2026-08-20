@@ -94,6 +94,10 @@ export class SadadQurodComponent implements OnInit {
       keywords: 'سداد قروض, سداد القروض, سداد قروض شخصية, سداد قروض السيارات, سداد قروض السكن, سداد قروض في السعودية, سداد مبكر للقروض'
     });
     this.seoService.setCanonical('https://www.tasdedqorod.com/سداد-قروض');
+    this.seoService.setBreadcrumbs([
+      { label: 'الرئيسية', url: 'https://www.tasdedqorod.com/' },
+      { label: 'سداد قروض', url: 'https://www.tasdedqorod.com/سداد-قروض' }
+    ]);
     this.seoService.addFaqSchema(this.faqs);
   }
 }

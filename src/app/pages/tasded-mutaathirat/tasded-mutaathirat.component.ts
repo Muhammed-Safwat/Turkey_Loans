@@ -86,6 +86,10 @@ export class TasdedMutaathiratComponent implements OnInit {
       keywords: 'تسديد المتعثرات, تسوية المتعثرات, سمة, إيقاف الخدمات, المديونيات, تحسين سمة, تسديد ديون, المتعثرات المالية في السعودية'
     });
     this.seoService.setCanonical('https://www.tasdedqorod.com/تسديد-المتعثرات');
+    this.seoService.setBreadcrumbs([
+      { label: 'الرئيسية', url: 'https://www.tasdedqorod.com/' },
+      { label: 'تسديد المتعثرات', url: 'https://www.tasdedqorod.com/تسديد-المتعثرات' }
+    ]);
     this.seoService.addFaqSchema(this.faqs);
   }
 }

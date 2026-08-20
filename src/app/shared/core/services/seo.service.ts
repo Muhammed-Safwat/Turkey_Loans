@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { filter } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,18 +15,12 @@ export class SeoService {
     private title: Title,
     private router: Router,
     private translate: TranslateService
-  ) {
-    this.setupRouterSubscription();
-  }
+  ) {}
 
-  private setupRouterSubscription(): void {
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.updateSEOTags();
-      });
-  }
-
+  // Note: this used to auto-run on every NavigationEnd, which raced with each
+  // page component's own ngOnInit and clobbered its title/description back to
+  // these generic (homepage) values. Every route now sets its own SEO tags
+  // explicitly in ngOnInit, so this is only called by the home page itself.
   updateSEOTags(): void {
     const currentUrl = this.router.url;
     const language = this.getLanguageFromUrl(currentUrl);
@@ -111,8 +104,8 @@ export class SeoService {
       "areaServed": "Saudi Arabia"
     };
 
-    // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    // Remove existing main structured data only (leave FAQ/breadcrumb schemas alone)
+    const existingScript = document.querySelector('script[data-type="main-schema"]');
     if (existingScript) {
       existingScript.remove();
     }
@@ -120,6 +113,7 @@ export class SeoService {
     // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
+    script.setAttribute('data-type', 'main-schema');
     script.text = JSON.stringify(structuredData);
     document.head.appendChild(script);
   }
@@ -163,6 +157,39 @@ export class SeoService {
     link.setAttribute('href', url);
     this.meta.updateTag({ property: 'og:url', content: url });
     this.meta.updateTag({ name: 'twitter:url', content: url });
+  }
+
+  // Keeps accidental/typo/unknown URLs (the wildcard error route) out of Google's
+  // index, since the server always returns 200 for every path (SPA fallback).
+  setNoIndex(noIndex: boolean = true): void {
+    const content = noIndex ? 'noindex, nofollow' : 'index, follow';
+    this.meta.updateTag({ name: 'robots', content });
+    this.meta.updateTag({ name: 'googlebot', content });
+  }
+
+  // Adds BreadcrumbList structured data so Google can show the page's breadcrumb
+  // trail (e.g. "الرئيسية › خدماتنا › تسديد القروض") instead of the raw URL in
+  // search results. Call only on pages that already show a matching breadcrumb UI.
+  setBreadcrumbs(items: { label: string; url: string }[]): void {
+    const existing = document.querySelector('script[data-type="breadcrumb-schema"]');
+    if (existing) existing.remove();
+
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.label,
+        item: item.url
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.setAttribute('data-type', 'breadcrumb-schema');
+    script.text = JSON.stringify(schema);
+    document.head.appendChild(script);
   }
 
   addFaqSchema(faqs: { q: string; a: string }[]): void {

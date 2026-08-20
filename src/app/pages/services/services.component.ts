@@ -34,6 +34,10 @@ export class ServicesComponent implements OnInit {
       keywords: 'خدماتنا, خدمات تسديد القروض, خدمات مالية السعودية, تسديد متعثرات, إعادة تمويل'
     });
     this.seoService.setCanonical('https://www.tasdedqorod.com/services');
+    this.seoService.setBreadcrumbs([
+      { label: 'الرئيسية', url: 'https://www.tasdedqorod.com/' },
+      { label: 'خدماتنا', url: 'https://www.tasdedqorod.com/services' }
+    ]);
   }
 
   services = [
@@ -134,7 +138,7 @@ export class ServicesComponent implements OnInit {
     title: 'خدمات تسديد القروض والمتعثرات',
     description: 'نحن مجموعة مكاتب تسديد قروض ومتعثرات وسداد إيقاف الخدمات ومتعثرات سمه واستخراج قرض جديد بأعلى تمويل',
     breadcrumbItems: [
-      { label: 'الرئيسية', link: 'index.html' },
+      { label: 'الرئيسية', link: '/' },
       { label: 'خدماتنا' }
     ]
   };

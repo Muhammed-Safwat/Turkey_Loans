@@ -339,6 +339,11 @@ export class ServiceDetailComponent implements OnInit {
           description: `${this.service.description} ✅ استشارة مجانية ✅ تواصل الآن +966561527263`
         });
         this.seoService.setCanonical(`https://www.tasdedqorod.com/services/${this.serviceId}`);
+        this.seoService.setBreadcrumbs([
+          { label: 'الرئيسية', url: 'https://www.tasdedqorod.com/' },
+          { label: 'الخدمات', url: 'https://www.tasdedqorod.com/services' },
+          { label: this.service.title, url: `https://www.tasdedqorod.com/services/${this.serviceId}` }
+        ]);
       }
     });
   }
